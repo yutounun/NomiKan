@@ -67,11 +67,13 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 - [x] devcontainer
 - [ ] supabase
 - [x] React
-- [ ] Testing Library
+- [x] Testing Library
+- [x] CI
+- [ ] CD
 - [ ] Figma
 - [ ] Copilot
 - [ ] StopLight
-- [ ] StoryBook
+- [x] StoryBook
 - [ ] MUI
 - [ ] Atomic Design
 - [ ] PWA

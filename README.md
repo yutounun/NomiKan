@@ -81,3 +81,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ### Code Splitting
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+## Must-read articles
+- [envfiles settings](https://rahuulmiishra.medium.com/setting-up-different-environment-files-in-react-app-9204d9373584)

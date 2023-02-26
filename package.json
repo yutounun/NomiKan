@@ -792,7 +792,8 @@
     "yaml": "^1.10.2",
     "yargs": "^16.2.0",
     "yargs-parser": "^20.2.9",
-    "yocto-queue": "^0.1.0"
+    "yocto-queue": "^0.1.0",
+    "zustand": "^4.3.3"
   },
   "scripts": {
     "local": "NODE_ENV=local react-scripts start",

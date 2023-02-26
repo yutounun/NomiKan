@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-init",
+  "dockerFile": "Dockerfile",
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.scrollback": 10000,
+    "eslint.options": {
+      "extensions": [".js", ".vue"]
+    },
+    "eslint.validate": ["javascript", "vue"]
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": ["EQuimper.react-native-react-redux"],
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "npm ci"
+}

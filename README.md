@@ -59,9 +59,23 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## App Candidate
+- [ ] A similar App with Walica
+- [ ] Food Tracker
 
 ## Tech Stacks
-- [ ] devcontainer
+- [x] devcontainer
+- [ ] supabase
+- [x] React
+- [ ] Testing Library
+- [ ] Figma
+- [ ] Copilot
+- [ ] StopLight
+- [ ] StoryBook
+- [ ] MUI
+- [ ] Atomic Design
+- [ ] PWA
+- [ ] Strict TypeScript
 
 
 ### Code Splitting

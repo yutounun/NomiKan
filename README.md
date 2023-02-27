@@ -2,7 +2,7 @@
 
 This is the react application. We haven't decided what we're gonna make yet.
 
-https://gifted-airboat-26e.notion.site/NomiKan-4a92bb4555d947ab87c3894f9cef976d
+[Nomikan Specification](https://gifted-airboat-26e.notion.site/NomiKan-4a92bb4555d947ab87c3894f9cef976d)
 
 ## How to start contributing
 

@@ -9,7 +9,11 @@ interface Action {
 }
 
 export const useStore = create<State & Action>((set) => ({
-  bears: 1,
-  increasePopulation: () => { set((state) => ({ bears: state.bears + 1 })) },
-  removeAllBears: () => { set({ bears: 0 }) }
+  bears: 3,
+  increasePopulation: () => {
+    set((state) => ({ bears: state.bears + 1 }))
+  },
+  removeAllBears: () => {
+    set({ bears: 0 })
+  },
 }))

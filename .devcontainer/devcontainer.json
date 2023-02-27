@@ -17,7 +17,12 @@
         "eslint.validate": ["javascript", "vue"]
       },
       // Add the IDs of extensions you want installed when the container is created.
-      "extensions": ["EQuimper.react-native-react-redux", "seatonjiang.gitmoji-vscode", "yzhang.markdown-all-in-one"]
+      "extensions": [
+		"EQuimper.react-native-react-redux",
+		"seatonjiang.gitmoji-vscode",
+		"yzhang.markdown-all-in-one",
+		"esbenp.prettier-vscode"
+	]
     }
   },
   // Use 'forwardPorts' to make a list of ports inside the container available locally.

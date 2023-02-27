@@ -18,11 +18,16 @@
       },
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-		"EQuimper.react-native-react-redux",
-		"seatonjiang.gitmoji-vscode",
-		"yzhang.markdown-all-in-one",
-		"esbenp.prettier-vscode"
-	]
+        "EQuimper.react-native-react-redux",
+        "seatonjiang.gitmoji-vscode",
+        "yzhang.markdown-all-in-one",
+        "esbenp.prettier-vscode",
+        "donjayamanne.githistory",
+        "dbaeumer.vscode-eslint",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "dsznajder.es7-react-js-snippets"
+      ]
     }
   },
   // Use 'forwardPorts' to make a list of ports inside the container available locally.

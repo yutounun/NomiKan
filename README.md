@@ -1,6 +1,8 @@
 # Getting Started with Us
 
-This is the react application. We haven't decided what we're gonna make yet.
+[DEV_ENV](https://spectacular-boba-b2aad2.netlify.app/)
+
+This is the App to help the organizer at drinking party to know how much others have to pay.
 
 [Nomikan Specification](https://gifted-airboat-26e.notion.site/NomiKan-4a92bb4555d947ab87c3894f9cef976d)
 
@@ -98,3 +100,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 ## Must-read articles
 
 - [envfiles settings](https://create-react-app.dev/docs/adding-custom-environment-variables/1)
+- [Deploy with Github Actions and Netlify](https://dev.to/dancrtis/ci-cd-pipeline-with-netlify-and-github-actions-bcm)

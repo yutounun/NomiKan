@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - "**.md"
+      - '**.md'
 
 jobs:
   style_check:
@@ -14,3 +14,5 @@ jobs:
     uses: ./.github/workflows/frontend_build_check.yml
   unit_test:
     uses: ./.github/workflows/frontend_unit_test.yml
+  deployment:
+    uses: ./.github/workflows/deployment.yml

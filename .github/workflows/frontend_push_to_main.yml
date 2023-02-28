@@ -15,4 +15,4 @@ jobs:
   unit_test:
     uses: ./.github/workflows/frontend_unit_test.yml
   deployment:
-    uses: ./.github/workflows/deployment.yml
+    uses: ./.github/workflows/frontend_deployment.yml

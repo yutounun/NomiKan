@@ -8,27 +8,28 @@ This is the react application. We haven't decided what we're gonna make yet.
 
 <img width="861" alt="image" src="https://user-images.githubusercontent.com/96335290/221718011-83a1ab20-9b64-4a81-938c-760ec78a0d75.png">
 
-
-
 ## How to start contributing
 
 ### clone this repo
+
 ```sh
 cd <YourFavoriteDirectory>
 git clone https://github.com/yutounun/awesome-app.git
 ```
 
 ### Install remote extentions
-Install ```ms-vscode-remote.remote-containers``` to start using devcontainer environment.
+
+Install `ms-vscode-remote.remote-containers` to start using devcontainer environment.
 
 ### Install Docker
+
 Install Docker from [here](https://docs.docker.com/desktop/install/mac-install/).
 
 ### Dive into devcontainer environment!!
-Once you install everything you need, press ```cmd+shift+p``` and ```Dev Containers: Open folder in container```.
+
+Once you install everything you need, press `cmd+shift+p` and `Dev Containers: Open folder in container`.
 
 It should take a while for the first time, but it'll be shorter from second time. Be patient plz :D
-
 
 ## Available Scripts
 
@@ -68,10 +69,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Candidate Apps
+
 - [ ] A similar App with Walica
 - [ ] Food Tracker
 
 ## Tech Stacks
+
 - [x] devcontainer
 - [ ] supabase
 - [x] React
@@ -85,12 +88,13 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 - [ ] MUI
 - [ ] Atomic Design
 - [ ] PWA
+- [ ] Netlify
 - [ ] Strict TypeScript
-
 
 ### Code Splitting
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
 ## Must-read articles
+
 - [envfiles settings](https://create-react-app.dev/docs/adding-custom-environment-variables/1)

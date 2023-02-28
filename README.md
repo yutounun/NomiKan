@@ -98,3 +98,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 ## Must-read articles
 
 - [envfiles settings](https://create-react-app.dev/docs/adding-custom-environment-variables/1)
+- [Deploy with Github Actions and Netlify](https://dev.to/dancrtis/ci-cd-pipeline-with-netlify-and-github-actions-bcm)

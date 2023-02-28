@@ -5,7 +5,7 @@ This is the react application. We haven't decided what we're gonna make yet.
 [Nomikan Specification](https://gifted-airboat-26e.notion.site/NomiKan-4a92bb4555d947ab87c3894f9cef976d)
 
 [Figma](https://www.figma.com/file/rCcFP28Aws9kDXAZBRyYLp/%E7%84%A1%E9%A1%8C?node-id=0%3A1&t=nuxgWPbvti5CUmYT-1)
-<img width="1227" alt="image" src="https://user-images.githubusercontent.com/96335290/221713846-20acd711-24de-438c-9577-954fdb4d5bd5.png">
+<img width="833" alt="image" src="https://user-images.githubusercontent.com/96335290/221717755-efbdf6c7-4487-4dfc-b705-5159ff3ea2ad.png">
 
 
 ## How to start contributing

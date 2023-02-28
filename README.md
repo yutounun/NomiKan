@@ -6,7 +6,8 @@ This is the react application. We haven't decided what we're gonna make yet.
 
 [Figma](https://www.figma.com/file/rCcFP28Aws9kDXAZBRyYLp/%E7%84%A1%E9%A1%8C?node-id=0%3A1&t=nuxgWPbvti5CUmYT-1)
 
-<img width="833" alt="image" src="https://user-images.githubusercontent.com/96335290/221717755-efbdf6c7-4487-4dfc-b705-5159ff3ea2ad.png">
+<img width="861" alt="image" src="https://user-images.githubusercontent.com/96335290/221718011-83a1ab20-9b64-4a81-938c-760ec78a0d75.png">
+
 
 
 ## How to start contributing

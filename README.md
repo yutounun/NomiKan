@@ -10,6 +10,10 @@ This is the App to help the organizer at drinking party to know how much others 
 
 <img width="861" alt="image" src="https://user-images.githubusercontent.com/96335290/221718011-83a1ab20-9b64-4a81-938c-760ec78a0d75.png">
 
+## Caution
+
+- Make sure to read [style guide from Airbnb](https://github.com/airbnb/javascript/tree/master/react)
+
 ## How to start contributing
 
 ### clone this repo
@@ -101,3 +105,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 
 - [envfiles settings](https://create-react-app.dev/docs/adding-custom-environment-variables/1)
 - [Deploy with Github Actions and Netlify](https://dev.to/dancrtis/ci-cd-pipeline-with-netlify-and-github-actions-bcm)
+- [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/)

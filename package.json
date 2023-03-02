@@ -804,7 +804,7 @@
     "test:dev": "NODE_ENV=development react-scripts test",
     "test:prod": "NODE_ENV=production react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6007 -s public",
+    "sb": "start-storybook -p 6007 -s public",
     "build-storybook": "build-storybook -s public",
     "lint": "eslint src/*.js"
   },

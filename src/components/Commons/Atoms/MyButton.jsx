@@ -5,6 +5,7 @@ import Button from '@mui/material/Button'
 const MyButton = (props) => {
   return (
     <Button
+      data-testid='button'
       variant={props.variant}
       color={props.color}
       size={props.size}

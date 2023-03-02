@@ -98,6 +98,8 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 - [ ] PWA
 - [ ] Netlify
 - [ ] Strict TypeScript
+- [ ] TDD
+- [ ] Codeium
 
 ### Code Splitting
 

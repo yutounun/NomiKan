@@ -6,7 +6,11 @@ export default {
   title: 'Commons/Atoms/MyButton',
   component: MyButton,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    variant: {},
+    value: {},
+    color: {},
+    size: {},
+    startIcon: {},
   },
 }
 

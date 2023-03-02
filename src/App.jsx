@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import MyButton from './components/Commons/Atoms/MyButton/MyButton.tsx'
+import MyButton from './components/Commons/Atoms/MyButton'
 import Button from '@mui/material/Button'
 import { useStore } from './stores/storeSample.ts'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import MyButton from '../../components/Commons/Atoms/MyButton/MyButton'
+import MyButton from '../../components/Commons/Atoms/MyButton'
 
 export default {
   title: 'Commons/Atoms/MyButton',

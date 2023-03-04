@@ -36,3 +36,57 @@ Primary.args = {
   size: 'medium',
   variant: 'contained',
 }
+
+export const Secondary = Template.bind({})
+Secondary.args = {
+  color: 'secondary',
+  value: 'Button',
+  disabled: false,
+  size: 'medium',
+  variant: 'contained',
+}
+
+export const Wide = Template.bind({})
+Wide.args = {
+  color: 'primary',
+  value: 'Button Button Button Button Button',
+  disabled: false,
+  size: 'medium',
+  variant: 'contained',
+}
+
+export const Large = Template.bind({})
+Large.args = {
+  color: 'primary',
+  value: 'Button',
+  disabled: false,
+  size: 'large',
+  variant: 'contained',
+}
+
+export const Small = Template.bind({})
+Small.args = {
+  color: 'primary',
+  value: 'Button',
+  disabled: false,
+  size: 'small',
+  variant: 'contained',
+}
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+  color: 'primary',
+  value: 'Button',
+  disabled: true,
+  size: 'medium',
+  variant: 'contained',
+}
+
+export const Outlined = Template.bind({})
+Outlined.args = {
+  color: 'primary',
+  value: 'Button',
+  disabled: false,
+  size: 'medium',
+  variant: 'outlined',
+}

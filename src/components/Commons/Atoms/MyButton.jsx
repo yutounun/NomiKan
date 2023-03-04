@@ -5,6 +5,7 @@ import Button from '@mui/material/Button'
 const MyButton = (props) => {
   return (
     <Button
+      onClick={props.onClick}
       data-testid='button'
       variant={props.variant}
       color={props.color}
@@ -24,5 +25,6 @@ MyButton.propTypes = {
   size: PropTypes.string,
   disabled: PropTypes.bool,
   startIcon: PropTypes.node,
+  onClick: PropTypes.func,
 }
 export default MyButton

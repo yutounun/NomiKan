@@ -11,12 +11,16 @@ function App() {
     state.removeAllBears,
     state.increasePopulation,
   ])
+  const showConsole = () => {
+    console.log('example')
+  }
 
   return (
     <div className='App'>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         <MyButton
+          onClick={showConsole}
           variant='contained'
           color='secondary'
           size='small'

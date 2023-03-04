@@ -6,10 +6,22 @@ export default {
   title: 'Commons/Atoms/MyButton',
   component: MyButton,
   argTypes: {
-    variant: {},
-    value: {},
-    color: {},
-    size: {},
+    variant: {
+      options: ['contained', 'outlined'],
+      control: { type: 'radio' },
+    },
+    value: {
+      control: 'text',
+    },
+    color: {
+      options: ['primary', 'secondary', 'success', 'error', 'info', 'warning'],
+      control: { type: 'radio' },
+    },
+    disabled: { control: 'boolean' },
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: { type: 'radio' },
+    },
     startIcon: {},
   },
 }
@@ -20,4 +32,7 @@ export const Primary = Template.bind({})
 Primary.args = {
   color: 'primary',
   value: 'Button',
+  disabled: false,
+  size: 'medium',
+  variant: 'contained',
 }

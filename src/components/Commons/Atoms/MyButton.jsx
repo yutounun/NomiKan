@@ -9,6 +9,7 @@ const MyButton = (props) => {
       variant={props.variant}
       color={props.color}
       size={props.size}
+      disabled={props.disabled}
       startIcon={props.startIcon}
     >
       {props.value}
@@ -21,6 +22,7 @@ MyButton.propTypes = {
   value: PropTypes.string,
   color: PropTypes.string,
   size: PropTypes.string,
+  disabled: PropTypes.bool,
   startIcon: PropTypes.node,
 }
 export default MyButton

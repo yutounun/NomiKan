@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "mhutchie.git-graph",
+    "donjayamanne.githistory",
+    "dbaeumer.vscode-eslint",
+    "seatonjiang.gitmoji-vscode",
+    "arjun.swagger-viewer",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "dsznajder.es7-react-js-snippets"
+  ]
+}

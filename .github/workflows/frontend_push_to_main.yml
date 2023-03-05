@@ -1,0 +1,18 @@
+name: push workflow
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  style_check:
+    uses: ./.github/workflows/frontend_style_check.yml
+  generate_check:
+    uses: ./.github/workflows/frontend_build_check.yml
+  unit_test:
+    uses: ./.github/workflows/frontend_unit_test.yml
+  deployment:
+    uses: ./.github/workflows/frontend_deployment.yml

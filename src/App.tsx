@@ -1,8 +1,8 @@
 import './App.css'
-import MyButton from './components/Commons/Atoms/MyButton'
+import MyButton from 'components/Commons/Atoms/MyButton'
 import Button from '@mui/material/Button'
-import logo from './logo.svg'
-import { useStore } from './stores/storeSample'
+import logo from 'logo.svg'
+import { useStore } from 'stores/storeSample'
 
 function App() {
   const [bears, removeAllBears, increasePopulation] = useStore((state) => [

@@ -1,4 +1,4 @@
-import MyButton from '../../components/Commons/Atoms/MyButton'
+import MyButton from 'components/Commons/Atoms/MyButton'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {

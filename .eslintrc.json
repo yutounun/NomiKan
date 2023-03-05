@@ -33,6 +33,16 @@
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     ],
+    "quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "object-curly-newline": "off",
+    "no-console": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

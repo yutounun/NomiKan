@@ -1,22 +1,22 @@
 /* eslint-disable react/function-component-definition */
-import Button from '@mui/material/Button';
-import React from 'react';
+import Button from "@mui/material/Button";
+import React from "react";
 
 class Props {
-  variant?: 'contained' | 'outlined' = 'contained';
+  variant?: "contained" | "outlined" = "contained";
 
-  value?: string = 'Click Me!';
+  value?: string = "Click Me!";
 
   color?:
-    | 'inherit'
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'error'
-    | 'info'
-    | 'warning' = 'primary';
+    | "inherit"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "info"
+    | "warning" = "primary";
 
-  size?: 'small' | 'medium' | 'large' = 'medium';
+  size?: "small" | "medium" | "large" = "medium";
 
   disabled?: boolean = false;
 

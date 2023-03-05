@@ -36,7 +36,8 @@
     "eject": "react-scripts eject",
     "sb": "start-storybook -p 6007 -s public",
     "build-storybook": "build-storybook -s public",
-    "lint": "eslint \"src/**/*.{tsx, ts}\""
+    "lint": "eslint \"src/**/*.{tsx, ts}\"",
+    "lint:fix": "eslint \"src/**/*.{tsx, ts}\" --fix"
   },
   "eslintConfig": {
     "overrides": [

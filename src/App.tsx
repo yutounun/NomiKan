@@ -1,9 +1,9 @@
-import './App.css';
-import React from 'react';
-import MyButton from 'components/Commons/Atoms/MyButton';
-import Button from '@mui/material/Button';
-import logo from 'logo.svg';
-import { useStore } from 'stores/storeSample';
+import "./App.css";
+import React from "react";
+import MyButton from "components/Commons/Atoms/MyButton";
+import Button from "@mui/material/Button";
+import logo from "logo.svg";
+import useStore from "stores/storeSample";
 
 function App() {
   const [bears, removeAllBears, increasePopulation] = useStore((state) => [
@@ -16,14 +16,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-          {bears}
-        </p>
+        <p>Edit</p>
+        {bears}
         <Button onClick={increasePopulation}>Increase</Button>
         <Button onClick={removeAllBears}>Clear</Button>
         <Button>sss</Button>

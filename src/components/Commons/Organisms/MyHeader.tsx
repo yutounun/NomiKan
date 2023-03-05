@@ -6,7 +6,11 @@ class Props {
 }
 function MyHeader(props: Props) {
   const { value } = props;
-  return <div className="header">{value}</div>;
+  return (
+    <div className="header" data-testid="header">
+      {value}
+    </div>
+  );
 }
 
 export default MyHeader;

@@ -1,6 +1,5 @@
-import React from 'react'
 import './App.css'
-// import MyButton from './components/Commons/Atoms/MyButton'
+import MyButton from './components/Commons/Atoms/MyButton'
 import Button from '@mui/material/Button'
 import logo from './logo.svg'
 import { useStore } from './stores/storeSample'
@@ -22,6 +21,7 @@ function App() {
         <Button onClick={increasePopulation}>Increase</Button>
         <Button onClick={removeAllBears}>Clear</Button>
         <Button>sss</Button>
+        <MyButton value='aa' variant='contained' size='medium' />
         <a
           className='App-link'
           href='https://reactjs.org'

@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import MyButton from "components/Commons/Atoms/MyButton";
+import MyHeader from "components/Commons/Organisms/MyHeader";
 import Button from "@mui/material/Button";
 import logo from "logo.svg";
 import useStore from "stores/storeSample";
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <MyHeader value="TOP" />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Edit</p>

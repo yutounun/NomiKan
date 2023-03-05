@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition */
 import Button from "@mui/material/Button";
 import React from "react";
 
@@ -22,10 +21,8 @@ class Props {
 
   onClick?: () => void;
 }
-const MyButton: React.FC<Props> = (props) => {
-  const {
-    onClick, variant, color, size, disabled, value,
-  } = props;
+function MyButton(props: Props) {
+  const { onClick, variant, color, size, disabled, value } = props;
   return (
     <Button
       onClick={onClick}
@@ -38,6 +35,6 @@ const MyButton: React.FC<Props> = (props) => {
       {value}
     </Button>
   );
-};
+}
 
 export default MyButton;

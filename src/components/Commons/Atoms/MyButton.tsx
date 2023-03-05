@@ -1,8 +1,12 @@
-import Button from '@mui/material/Button'
+/* eslint-disable react/function-component-definition */
+import Button from '@mui/material/Button';
+import React from 'react';
 
-interface Props {
-  variant?: 'contained' | 'outlined'
-  value?: string
+class Props {
+  variant?: 'contained' | 'outlined' = 'contained';
+
+  value?: string = 'Click Me!';
+
   color?:
     | 'inherit'
     | 'primary'
@@ -10,23 +14,30 @@ interface Props {
     | 'success'
     | 'error'
     | 'info'
-    | 'warning'
-  size?: 'small' | 'medium' | 'large'
-  disabled?: boolean
-  onClick?: () => void
+    | 'warning' = 'primary';
+
+  size?: 'small' | 'medium' | 'large' = 'medium';
+
+  disabled?: boolean = false;
+
+  onClick?: () => void;
 }
 const MyButton: React.FC<Props> = (props) => {
+  const {
+    onClick, variant, color, size, disabled, value,
+  } = props;
   return (
     <Button
-      onClick={props.onClick}
-      data-testid='button'
-      variant={props.variant}
-      color={props.color}
-      size={props.size}
-      disabled={props.disabled}
+      onClick={onClick}
+      data-testid="button"
+      variant={variant}
+      color={color}
+      size={size}
+      disabled={disabled}
     >
-      {props.value}
+      {value}
     </Button>
-  )
-}
-export default MyButton
+  );
+};
+
+export default MyButton;

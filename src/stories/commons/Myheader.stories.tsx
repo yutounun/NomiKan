@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import React from "react";
 
 export default {
-  title: "Commons/Atoms/MyHeader",
+  title: "Commons/Organisms/MyHeader",
   component: MyHeader,
   argTypes: {
     value: {

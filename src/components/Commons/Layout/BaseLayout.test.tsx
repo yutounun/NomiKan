@@ -15,8 +15,8 @@ describe("BaseLayout", () => {
     expect(textElement).toBeInTheDocument();
   });
 
-  // it("takes a snapshot", () => {
-  //   const { asFragment } = render(<BaseLayout />);
-  //   expect(asFragment()).toMatchSnapshot();
-  // });
+  it("takes a snapshot", () => {
+    const { asFragment } = render(<BaseLayout />);
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

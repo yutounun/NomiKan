@@ -1,4 +1,4 @@
-name: generate check
+name: unit test
 
 on:
   workflow_call:

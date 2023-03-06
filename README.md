@@ -109,4 +109,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 
 - [envfiles settings](https://create-react-app.dev/docs/adding-custom-environment-variables/1)
 - [Deploy with Github Actions and Netlify](https://dev.to/dancrtis/ci-cd-pipeline-with-netlify-and-github-actions-bcm)
-- [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/)
+    - [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/)
+- [tools and libraries used in React in Japanese](https://qiita.com/mikan3rd/items/b9ac6125b1f14175677e)

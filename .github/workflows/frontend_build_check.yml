@@ -1,4 +1,4 @@
-name: generate check
+name: build check
 
 on:
   workflow_call:

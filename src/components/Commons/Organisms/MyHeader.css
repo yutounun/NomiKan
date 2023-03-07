@@ -1,0 +1,9 @@
+.header {
+  position: fixed;
+  color: black;
+  padding: 10px 0px;
+  font-size: 1.4em;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}

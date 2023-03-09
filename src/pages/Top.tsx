@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Top.css";
+import "./Top.scss";
 
 import MyButton from "components/Commons/Atoms/MyButton";
 import BaseLayout from "components/Commons/Layout/BaseLayout";

@@ -11,47 +11,59 @@ import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
 import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
 
+import useMediaQuery from "@mui/material/useMediaQuery";
+import theme from "theme";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
+
 function Top() {
   const handleClickStart = () => {
     console.log("clicked!");
   };
+
+  // Check if the device is on dark mode
+  const isDarkMode: boolean = useMediaQuery("(prefers-color-scheme: dark)");
+
   return (
-    <BaseLayout>
-      <div className="wrapper">
-        <MyHeader value="NomiKan" />
-        <div className="container">
-          <span className="text-gray top-title">部長のお会計をお助け！</span>
-          <img src={Cheers} alt="" />
-          <span className="explanation">
-            各メンバーの支払額を%で計算することができます
-          </span>
-          <div className="buttons">
-            <MyButton
-              onClick={handleClickStart}
-              startIcon={<RocketLaunchOutlinedIcon />}
-              variant="outlined"
-              value="はじめる"
-              color="primary"
-              size="large"
-            />
-            <MyButton
-              startIcon={<HowToRegOutlinedIcon />}
-              variant="outlined"
-              value="会員登録"
-              color="primary"
-              size="large"
-            />
-            <MyButton
-              startIcon={<LoginOutlinedIcon />}
-              variant="outlined"
-              value="ログイン"
-              color="primary"
-              size="large"
-            />
+    <ThemeProvider theme={theme(isDarkMode)}>
+      <CssBaseline />
+      <BaseLayout>
+        <div className="wrapper">
+          <MyHeader value="NomiKan" />
+          <div className="container">
+            <span className="text-gray top-title">部長のお会計をお助け！</span>
+            <img src={Cheers} alt="" />
+            <span className="explanation">
+              各メンバーの支払額を%で計算することができます
+            </span>
+            <div className="buttons">
+              <MyButton
+                onClick={handleClickStart}
+                startIcon={<RocketLaunchOutlinedIcon />}
+                variant="outlined"
+                value="はじめる"
+                color="primary"
+                size="large"
+              />
+              <MyButton
+                startIcon={<HowToRegOutlinedIcon />}
+                variant="outlined"
+                value="会員登録"
+                color="primary"
+                size="large"
+              />
+              <MyButton
+                startIcon={<LoginOutlinedIcon />}
+                variant="outlined"
+                value="ログイン"
+                color="primary"
+                size="large"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </BaseLayout>
+      </BaseLayout>
+    </ThemeProvider>
   );
 }
 

@@ -12,7 +12,7 @@ import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
 import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
 
 function Top() {
-  const clickStartBtn = () => {
+  const handleClickStart = () => {
     console.log("clicked!");
   };
   return (
@@ -27,7 +27,7 @@ function Top() {
           </span>
           <div className="buttons">
             <MyButton
-              onClick={clickStartBtn}
+              onClick={handleClickStart}
               startIcon={<RocketLaunchOutlinedIcon />}
               variant="outlined"
               value="はじめる"

@@ -1,8 +1,10 @@
 .header {
   position: fixed;
+  top: 0;
   color: black;
-  padding: 10px 0px;
+  padding: 20px 0px;
   font-size: 1.4em;
+  font-weight: 600;
   width: 100%;
   background-color: white;
   text-align: center;

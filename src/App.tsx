@@ -1,43 +1,34 @@
-import "./App.css";
 import React from "react";
-import MyButton from "components/Commons/Atoms/MyButton";
-import MyHeader from "components/Commons/Organisms/MyHeader";
-import Button from "@mui/material/Button";
-import logo from "logo.svg";
-import useStore from "stores/storeSample";
-import BaseLayout from "components/Commons/Layout/BaseLayout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import theme from "theme";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
+
+import Top from "pages/Top";
 
 function App() {
-  const [bears, removeAllBears, increasePopulation] = useStore((state) => [
-    state.bears,
-    state.removeAllBears,
-    state.increasePopulation,
+  const router = createBrowserRouter([
+    {
+      path: "/sample",
+      element: <App />,
+    },
+    {
+      path: "/",
+      element: <Top />,
+    },
   ]);
 
+  // Check if the device is on dark mode
+  const isDarkMode: boolean = useMediaQuery("(prefers-color-scheme: dark)");
+
   return (
-    <div className="App">
-      <BaseLayout>
-        <MyHeader value="top" />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Edit</p>
-          {bears}
-          <Button onClick={increasePopulation}>Increase</Button>
-          <Button onClick={removeAllBears}>Clear</Button>
-          <Button>sss</Button>
-          <MyButton value="aa" variant="contained" size="medium" />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-            {process.env.REACT_APP_ENV}
-          </a>
-        </header>
-      </BaseLayout>
-    </div>
+    // ThemeProvider is used to change the theme of the app
+    <ThemeProvider theme={theme(isDarkMode)}>
+      {/* CssBaseline is used to change the theme of the app */}
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 

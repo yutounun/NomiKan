@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Explanation takes a snapshot 1`] = `
+<DocumentFragment>
+  <span
+    class="text-gray top-title"
+  >
+    部長のお会計をお助け！
+  </span>
+  <img
+    alt=""
+    src="cheers.svg"
+  />
+  <span
+    class="explanation"
+  >
+    各メンバーの支払額を%で計算することができます
+  </span>
+</DocumentFragment>
+`;

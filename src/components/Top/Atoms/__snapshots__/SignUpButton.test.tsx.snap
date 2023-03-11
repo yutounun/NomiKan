@@ -5,7 +5,6 @@ exports[`SignUpButton takes a snapshot 1`] = `
   <button
     class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge css-9y1egq-MuiButtonBase-root-MuiButton-root"
     data-testid="button"
-    style="width: 200px;"
     tabindex="0"
     type="button"
   >

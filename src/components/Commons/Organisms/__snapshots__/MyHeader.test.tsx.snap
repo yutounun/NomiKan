@@ -3,8 +3,12 @@
 exports[`MyHeader takes a snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="header"
+    class="MuiStack-root css-muz5cb-MuiStack-root"
     data-testid="header"
-  />
+  >
+    <h1
+      class="MuiTypography-root MuiTypography-h1 css-o2w69a-MuiTypography-root"
+    />
+  </div>
 </DocumentFragment>
 `;

@@ -1,3 +1,4 @@
+import { Stack, Typography } from "@mui/material";
 import React from "react";
 import "./MyHeader.scss";
 
@@ -7,9 +8,19 @@ class Props {
 function MyHeader(props: Props) {
   const { value } = props;
   return (
-    <div className="header" data-testid="header">
-      {value}
-    </div>
+    <Stack
+      justifyContent="center"
+      alignItems="center"
+      data-testid="header"
+      mt={3}
+      sx={{
+        backgroundColor: "white",
+        position: "fixed",
+        top: 0,
+      }}
+    >
+      <Typography variant="h1">{value}</Typography>
+    </Stack>
   );
 }
 

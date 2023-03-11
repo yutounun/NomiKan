@@ -41,7 +41,6 @@ It should take a while for the first time, but it'll be shorter from second time
 
 ## Available Scripts
 
-
 ## Tech Stacks
 
 - [x] devcontainer
@@ -67,5 +66,6 @@ It should take a while for the first time, but it'll be shorter from second time
 
 - [envfiles settings](https://create-react-app.dev/docs/adding-custom-environment-variables/1)
 - [Deploy with Github Actions and Netlify](https://dev.to/dancrtis/ci-cd-pipeline-with-netlify-and-github-actions-bcm)
-    - [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/)
+  - [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/)
 - [tools and libraries used in React in Japanese](SCSShttps://qiita.com/mikan3rd/items/b9ac6125b1f14175677e)
+- [if 文は JSX の中で書け](https://qiita.com/horiy0125/items/fa07f5baa6028b9746ce)

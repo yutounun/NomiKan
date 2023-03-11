@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {
+  Alert,
   Box,
+  Snackbar,
   Stack,
   Step,
   StepLabel,
@@ -17,13 +19,25 @@ import { useCostStore } from "stores/cost";
 
 function TotalAmount() {
   const [cost, setCost] = useCostStore((state) => [state.cost, state.setCost]);
+  const [open, setOpen] = useState(false);
 
   const [localCost, setLocalCost] = useState<number | string>("");
 
   /** save cost to Zustand store */
   const handleClickButton = () => {
+    // set input cost on Session storage
     setCost(localCost);
+
+    // open the snack bar
+    setOpen(true);
+
+    // clear input cost
     setLocalCost("");
+  };
+
+  /** close the snack bar */
+  const handleOnClose = () => {
+    setOpen(false);
   };
 
   const steps = ["合計金額", "メンバー追加", "割合入力", "結果"];
@@ -67,6 +81,17 @@ function TotalAmount() {
           />
         </Stack>
       </Stack>
+
+      {/* Alert for the completion of registration  */}
+      <Snackbar
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        open={open}
+        onClose={handleOnClose}
+      >
+        <Alert onClose={handleOnClose} severity="info" sx={{ width: "100%" }}>
+          登録しました！
+        </Alert>
+      </Snackbar>
     </BaseLayout>
   );
 }

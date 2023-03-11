@@ -18,11 +18,12 @@ import { useCostStore } from "stores/cost";
 function TotalAmount() {
   const [cost, setCost] = useCostStore((state) => [state.cost, state.setCost]);
 
-  const [localCost, setLocalCost] = useState(0);
+  const [localCost, setLocalCost] = useState<number | string>("");
 
   /** save cost to Zustand store */
   const handleClickButton = () => {
     setCost(localCost);
+    setLocalCost("");
   };
 
   const steps = ["合計金額", "メンバー追加", "割合入力", "結果"];
@@ -53,11 +54,13 @@ function TotalAmount() {
             label="金額を入力してね"
             size="small"
             type="number"
+            value={localCost}
             variant="outlined"
             onChange={(e) => setLocalCost(Number(e.target.value))}
           />
           <MyButton
             onClick={handleClickButton}
+            disabled={localCost === ""}
             value="登録"
             variant="contained"
             sx={{ borderRadius: "30px", width: "100%" }}

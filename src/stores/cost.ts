@@ -4,11 +4,11 @@ import { mountStoreDevtool } from "simple-zustand-devtools";
 import { persist, createJSONStorage } from "zustand/middleware";
 
 interface State {
-  cost: number;
+  cost: number | string;
 }
 
 interface Action {
-  setCost: (newCost: number) => void;
+  setCost: (newCost: number | string) => void;
 }
 
 export const useCostStore = create<State & Action>()(
@@ -16,7 +16,7 @@ export const useCostStore = create<State & Action>()(
   persist(
     (set) => ({
       cost: 0,
-      setCost: (newCost: number) => set(() => ({ cost: newCost })),
+      setCost: (newCost: number | string) => set(() => ({ cost: newCost })),
     }),
     {
       name: "cost-storage",

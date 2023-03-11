@@ -7,17 +7,23 @@ import MyHeader from "components/Commons/Organisms/MyHeader";
 
 import Buttons from "components/Top/Organisms/Buttons";
 import Explanation from "components/Top/Organisms/Explanation";
+import { Stack } from "@mui/material";
 
 function Top() {
   return (
     <BaseLayout>
-      <div className="wrapper">
+      <Stack direction="column" justifyContent="center" alignItems="center">
         <MyHeader value="NomiKan" />
-        <div className="container">
+        <Stack
+          direction="column"
+          pt={10}
+          justifyContent="center"
+          alignItems="center"
+        >
           <Explanation />
           <Buttons />
-        </div>
-      </div>
+        </Stack>
+      </Stack>
     </BaseLayout>
   );
 }

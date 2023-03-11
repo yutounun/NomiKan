@@ -17,6 +17,11 @@ const theme = (isDarkMode: boolean) => {
     // With typography components,
     // the styles following will be applied to the selected element.
     typography: {
+      // Header
+      h1: {
+        fontSize: "1.2em",
+        fontWeight: 600,
+      },
       subtitle1: {
         fontSize: 18,
       },

@@ -13,10 +13,9 @@ function Explanation() {
       alignItems="center"
     >
       <Typography
-        variant="h5"
+        variant="subtitle1"
         component="span"
         sx={{
-          fontSize: 18,
           color: "info.main",
         }}
       >
@@ -24,10 +23,10 @@ function Explanation() {
       </Typography>
       <img src={Cheers} alt="" />
       <Typography
-        variant="h5"
+        variant="subtitle2"
         pt={2}
         component="span"
-        sx={{ fontSize: 16, textAlign: "center" }}
+        sx={{ textAlign: "center" }}
       >
         各メンバーの支払額を%で計算することができます
       </Typography>

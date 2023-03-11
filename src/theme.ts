@@ -1,22 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 
-declare module "@mui/material/styles" {
-  interface Theme {
-    // eslint-disable-next-line @typescript-eslint/ban-types
-    myFontSize: Object;
-  }
-  interface ThemeOptions {
-    // eslint-disable-next-line @typescript-eslint/ban-types
-    myFontSize: Object;
-  }
-}
-interface Theme {
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  myFontSize: Object;
-}
-
 const theme = (isDarkMode: boolean) => {
-  const originalTheme: Theme = createTheme({
+  const originalTheme = createTheme({
     palette: {
       mode: isDarkMode ? "dark" : "light",
       primary: {
@@ -29,12 +14,19 @@ const theme = (isDarkMode: boolean) => {
         main: "#8f8f8f",
       },
     },
-    myFontSize: {
-      xs: "0.75rem",
-      sm: "0.875rem",
-      md: "1rem",
-      lg: "1.125rem",
-      xl: "1.25rem",
+    // With typography components,
+    // the styles following will be applied to the selected element.
+    typography: {
+      subtitle1: {
+        fontSize: 18,
+      },
+      subtitle2: {
+        fontSize: 16,
+      },
+      // Main content
+      body1: {
+        fontSize: 18,
+      },
     },
   });
   return originalTheme;

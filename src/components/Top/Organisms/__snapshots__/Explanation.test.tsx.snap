@@ -2,19 +2,23 @@
 
 exports[`Explanation takes a snapshot 1`] = `
 <DocumentFragment>
-  <span
-    class="text-gray top-title"
+  <div
+    class="MuiStack-root css-1lefi6i-MuiStack-root"
   >
-    部長のお会計をお助け！
-  </span>
-  <img
-    alt=""
-    src="cheers.svg"
-  />
-  <span
-    class="explanation"
-  >
-    各メンバーの支払額を%で計算することができます
-  </span>
+    <span
+      class="MuiTypography-root MuiTypography-h5 css-4zg3cy-MuiTypography-root"
+    >
+      部長のお会計をお助け！
+    </span>
+    <img
+      alt=""
+      src="cheers.svg"
+    />
+    <span
+      class="MuiTypography-root MuiTypography-h5 css-jmp210-MuiTypography-root"
+    >
+      各メンバーの支払額を%で計算することができます
+    </span>
+  </div>
 </DocumentFragment>
 `;

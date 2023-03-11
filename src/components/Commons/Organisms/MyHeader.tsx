@@ -1,5 +1,5 @@
 import React from "react";
-import "./MyHeader.css";
+import "./MyHeader.scss";
 
 class Props {
   value?: string = "Title";

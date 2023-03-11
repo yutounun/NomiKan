@@ -5,6 +5,7 @@ exports[`MyButton takes a snapshot 1`] = `
   <button
     class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
     data-testid="button"
+    style="width: 200px;"
     tabindex="0"
     type="button"
   >

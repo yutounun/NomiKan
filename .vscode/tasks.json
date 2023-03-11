@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "local",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: local",
+      "detail": "npm run local"
+    }
+  ]
+}

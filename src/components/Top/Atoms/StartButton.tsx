@@ -1,15 +1,17 @@
 import React from "react";
 import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import MyButton from "components/Commons/Atoms/MyButton";
+import { useNavigate } from "react-router-dom";
 
 function StartButton() {
-  const handleClickStart = () => {
-    console.log("clicked!");
+  const navigate = useNavigate();
+  const handleOnClick = () => {
+    navigate("/total-amount");
   };
 
   return (
     <MyButton
-      onClick={handleClickStart}
+      onClick={handleOnClick}
       startIcon={<RocketLaunchOutlinedIcon />}
       variant="outlined"
       value="はじめる"

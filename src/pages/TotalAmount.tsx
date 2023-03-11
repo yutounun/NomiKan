@@ -47,7 +47,7 @@ function TotalAmount() {
         <MyHeader value="合計金額" />
 
         <Box sx={{ width: "100%" }} mt={10}>
-          <Stepper activeStep={1} alternativeLabel>
+          <Stepper activeStep={0} alternativeLabel>
             {steps.map((label) => (
               <Step key={label}>
                 <StepLabel>

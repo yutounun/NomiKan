@@ -32,6 +32,9 @@ const theme = (isDarkMode: boolean) => {
       body1: {
         fontSize: 18,
       },
+      body2: {
+        fontSize: 12,
+      },
     },
   });
   return originalTheme;

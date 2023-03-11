@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Stack, TextField } from "@mui/material";
+import {
+  Box,
+  Stack,
+  Step,
+  StepLabel,
+  Stepper,
+  TextField,
+  Typography,
+} from "@mui/material";
 
 import BaseLayout from "components/Commons/Layout/BaseLayout";
 import MyHeader from "components/Commons/Organisms/MyHeader";
@@ -16,19 +24,31 @@ function TotalAmount() {
   const handleClickButton = () => {
     setCost(localCost);
   };
+
+  const steps = ["合計金額", "メンバー追加", "割合入力", "結果"];
   return (
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
         <MyHeader value="合計金額" />
+
+        <Box sx={{ width: "100%" }} mt={10}>
+          <Stepper activeStep={1} alternativeLabel>
+            {steps.map((label) => (
+              <Step key={label}>
+                <StepLabel>
+                  <Typography variant="body2">{label}</Typography>
+                </StepLabel>
+              </Step>
+            ))}
+          </Stepper>
+        </Box>
         <Stack
           direction="column"
-          mt={20}
           justifyContent="center"
+          mt={10}
           alignItems="center"
           gap="70px"
         >
-          <p>{cost}</p>
-          {localCost}
           <TextField
             label="金額を入力してね"
             size="small"

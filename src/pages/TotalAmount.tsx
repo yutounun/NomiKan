@@ -7,7 +7,6 @@ import {
   Step,
   StepLabel,
   Stepper,
-  TextField,
   Typography,
 } from "@mui/material";
 
@@ -16,12 +15,12 @@ import MyHeader from "components/Commons/Organisms/MyHeader";
 
 import MyButton from "components/Commons/Atoms/MyButton";
 import { useCostStore } from "stores/cost";
+import CostTextField from "components/TotalAmount/Atoms/CostTextField";
 
 function TotalAmount() {
   const [cost, setCost] = useCostStore((state) => [state.cost, state.setCost]);
   const [open, setOpen] = useState(false);
-
-  const [localCost, setLocalCost] = useState<number | string>("");
+  const [localCost, setLocalCost] = useState<number | string | undefined>("");
 
   /** save cost to Zustand store */
   const handleClickButton = () => {
@@ -38,6 +37,11 @@ function TotalAmount() {
   /** close the snack bar */
   const handleOnClose = () => {
     setOpen(false);
+  };
+
+  /** handle input cost */
+  const handleUpdateCost = (updatedCost: number | string | undefined) => {
+    setLocalCost(updatedCost);
   };
 
   const steps = ["合計金額", "メンバー追加", "割合入力", "結果"];
@@ -64,14 +68,8 @@ function TotalAmount() {
           alignItems="center"
           gap="70px"
         >
-          <TextField
-            label="金額を入力してね"
-            size="small"
-            type="number"
-            value={localCost}
-            variant="outlined"
-            onChange={(e) => setLocalCost(Number(e.target.value))}
-          />
+          <Box>{localCost}</Box>
+          <CostTextField onChangeCost={handleUpdateCost} value={localCost} />
           <MyButton
             onClick={handleClickButton}
             disabled={localCost === ""}

@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./Top.scss";
-
 import BaseLayout from "components/Commons/Layout/BaseLayout";
 import MyHeader from "components/Commons/Organisms/MyHeader";
 
@@ -13,7 +11,7 @@ function Top() {
   return (
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
-        <MyHeader value="NomiKan" />
+        <MyHeader value="NomiKan" hideGoBack />
         <Stack
           direction="column"
           pt={10}

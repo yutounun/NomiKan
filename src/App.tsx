@@ -6,12 +6,13 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 
 import Top from "pages/Top";
+import TotalAmount from "pages/TotalAmount";
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/sample",
-      element: <App />,
+      path: "/total-amount",
+      element: <TotalAmount />,
     },
     {
       path: "/",

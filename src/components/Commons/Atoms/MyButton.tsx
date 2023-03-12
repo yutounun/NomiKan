@@ -21,9 +21,9 @@ class Props {
 
   onClick?: () => void;
 
-  style?: string;
-
   startIcon?: React.ReactNode;
+
+  sx?: object;
 }
 function MyButton({
   onClick,
@@ -32,12 +32,11 @@ function MyButton({
   size,
   disabled,
   value,
-  style,
   startIcon,
+  sx,
 }: Props) {
   return (
     <Button
-      style={{ width: "200px" }}
       onClick={onClick}
       data-testid="button"
       variant={variant}
@@ -45,6 +44,7 @@ function MyButton({
       size={size}
       disabled={disabled}
       startIcon={startIcon}
+      sx={sx}
     >
       {value}
     </Button>

@@ -10,5 +10,20 @@ exports[`MyHeader takes a snapshot 1`] = `
       class="MuiTypography-root MuiTypography-h1 css-o2w69a-MuiTypography-root"
     />
   </div>
+  <div
+    class="MuiStack-root css-1rh9169-MuiStack-root"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      data-testid="ArrowBackIosIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"
+      />
+    </svg>
+  </div>
 </DocumentFragment>
 `;

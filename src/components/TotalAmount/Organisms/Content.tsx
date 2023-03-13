@@ -26,10 +26,6 @@ function Content({ onOpen }: Props) {
     setLocalCost("");
   };
 
-  /** handle input cost */
-  const handleUpdateCost = (updatedCost: number | string | undefined) => {
-    setLocalCost(updatedCost);
-  };
   return (
     <Stack
       direction="column"
@@ -38,7 +34,7 @@ function Content({ onOpen }: Props) {
       alignItems="center"
       gap="70px"
     >
-      <CostTextField onChangeCost={handleUpdateCost} value={localCost} />
+      <CostTextField setLocalCost={setLocalCost} value={localCost} />
       <MyButton
         onClick={handleClickButton}
         disabled={localCost === ""}

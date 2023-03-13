@@ -2,14 +2,11 @@ import { TextField } from "@mui/material";
 import React from "react";
 
 class Props {
-  onChangeCost!: (value: string | number | undefined) => void;
+  setLocalCost!: (value: string | number | undefined) => void;
 
   value: string | number | undefined;
 }
-function CostTextField({ onChangeCost, value }: Props) {
-  const onChangeInputCost = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onChangeCost(e.target.value);
-  };
+function CostTextField({ setLocalCost, value }: Props) {
   return (
     <TextField
       label="金額を入力してね"
@@ -17,7 +14,7 @@ function CostTextField({ onChangeCost, value }: Props) {
       size="small"
       type="number"
       variant="outlined"
-      onChange={onChangeInputCost}
+      onChange={(e) => setLocalCost(e.target.value)}
     />
   );
 }

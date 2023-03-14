@@ -7,16 +7,21 @@ import { ThemeProvider } from "@mui/material/styles";
 
 import Top from "pages/Top";
 import TotalAmount from "pages/TotalAmount";
+import AddMembers from "pages/AddMembers";
 
 function App() {
   const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Top />,
+    },
     {
       path: "/total-amount",
       element: <TotalAmount />,
     },
     {
-      path: "/",
-      element: <Top />,
+      path: "/add-members",
+      element: <AddMembers />,
     },
   ]);
 

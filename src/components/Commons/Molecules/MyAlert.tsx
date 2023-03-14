@@ -24,7 +24,7 @@ function MyAlert({ parentOpen, value }: Props) {
       open={open}
       onClose={handleOnClose}
     >
-      <Alert onClose={handleOnClose} severity="info" sx={{ width: "100%" }}>
+      <Alert onClose={handleOnClose} sx={{ width: "100%" }}>
         {value}
       </Alert>
     </Snackbar>

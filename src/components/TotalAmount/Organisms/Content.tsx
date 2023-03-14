@@ -12,8 +12,6 @@ function Content({ onOpen }: Props) {
   const [cost, setCost] = useCostStore((state) => [state.cost, state.setCost]);
   const [localCost, setLocalCost] = useState<number | string | undefined>("");
 
-  console.log(cost);
-
   /** save cost to Zustand store */
   const handleClickButton = () => {
     // set input cost on Session storage

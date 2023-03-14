@@ -9,10 +9,10 @@ function MyStepper({ activeStep }: Props) {
 
   return (
     <Box sx={{ width: "100%" }} mt={10}>
-      <Stepper activeStep={activeStep} alternativeLabel>
+      <Stepper activeStep={activeStep} data-testid="stepper" alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>
-            <StepLabel>
+            <StepLabel data-testid={label}>
               <Typography variant="body2">{label}</Typography>
             </StepLabel>
           </Step>

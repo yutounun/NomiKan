@@ -1,6 +1,5 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import GoBack from "@mui/icons-material/ArrowBackIos";
 
 class Props {
@@ -9,9 +8,8 @@ class Props {
   hideGoBack?: boolean = false;
 }
 function MyHeader({ value, hideGoBack }: Props) {
-  const navigate = useNavigate();
-  const handleOnClickGoBack = () => {
-    navigate(-1);
+  const handleGoBack = () => {
+    window.history.back();
   };
   return (
     <>
@@ -34,7 +32,6 @@ function MyHeader({ value, hideGoBack }: Props) {
         <Stack
           justifyContent="left"
           alignItems="center"
-          data-testid="header"
           mt={3}
           sx={{
             backgroundColor: "white",
@@ -43,7 +40,7 @@ function MyHeader({ value, hideGoBack }: Props) {
             left: 20,
           }}
         >
-          <GoBack onClick={handleOnClickGoBack} />
+          <GoBack onClick={handleGoBack} />
         </Stack>
       )}
     </>

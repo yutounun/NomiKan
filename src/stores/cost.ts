@@ -1,14 +1,15 @@
+/* eslint-disable implicit-arrow-linebreak */
 import { create } from "zustand";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { mountStoreDevtool } from "simple-zustand-devtools";
 import { persist, createJSONStorage } from "zustand/middleware";
 
 interface State {
-  cost: number | string;
+  cost: number | string | undefined;
 }
 
 interface Action {
-  setCost: (newCost: number | string) => void;
+  setCost: (newCost: number | string | undefined) => void;
 }
 
 export const useCostStore = create<State & Action>()(
@@ -16,7 +17,8 @@ export const useCostStore = create<State & Action>()(
   persist(
     (set) => ({
       cost: 0,
-      setCost: (newCost: number | string) => set(() => ({ cost: newCost })),
+      setCost: (newCost: number | string | undefined) =>
+        set(() => ({ cost: newCost })),
     }),
     {
       name: "cost-storage",

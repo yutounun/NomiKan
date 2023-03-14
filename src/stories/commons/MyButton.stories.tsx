@@ -24,6 +24,10 @@ export default {
       control: { type: "radio" },
     },
     startIcon: {},
+    sx: {
+      control: "",
+      defaultValue: "contained",
+    },
   },
 } as ComponentMeta<typeof MyButton>;
 

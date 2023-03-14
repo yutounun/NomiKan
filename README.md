@@ -58,7 +58,7 @@ It should take a while for the first time, but it'll be shorter from second time
 - [ ] PWA
 - [ ] Netlify
 - [ ] Strict TypeScript
-- [ ] TDD
+- [x] TDD
 - [ ] Codeium
 - [ ] SCSS
 

@@ -5,14 +5,15 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteSweepIcon from "@mui/icons-material/DeleteSweep";
 import MyButton from "components/Commons/Atoms/MyButton";
 import { Link } from "react-router-dom";
+import { useNomikanStore } from "stores/nomikan";
 
 class Props {
   setOpen!: (value: boolean) => void;
 }
 
 function Content({ setOpen }: Props) {
-  // const [cost, setCost] = useNomikanStore((state) => [state.cost, state.setCost]);
-  const [localMemberNames, setLocalMemberNames] = useState<string[]>([]);
+  const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
+  const [localMemberNames, setLocalMemberNames] = useState<string[]>(members);
 
   const handleSetLocalMemberNames = (name: string) => {
     setLocalMemberNames((prevArray) => [...prevArray, name]);
@@ -21,7 +22,7 @@ function Content({ setOpen }: Props) {
 
   const handleClickRegButton = () => {
     // set input cost on Session storage
-    // setCost(localCost);
+    setMembers(localMemberNames);
 
     // open the alert
     setOpen(true);

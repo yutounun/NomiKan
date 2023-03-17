@@ -6,11 +6,12 @@ import { persist, createJSONStorage } from "zustand/middleware";
 
 interface State {
   cost: number | string | undefined;
-
+  members: Array<string>;
 }
 
 interface Action {
   setCost: (newCost: number | string | undefined) => void;
+  setMembers: (newMembers: Array<string>) => void;
 }
 
 export const useNomikanStore = create<State & Action>()(
@@ -18,11 +19,15 @@ export const useNomikanStore = create<State & Action>()(
   persist(
     (set) => ({
       cost: 0,
+      members: [],
+
       setCost: (newCost: number | string | undefined) =>
         set(() => ({ cost: newCost })),
+      setMembers: (newMembers: Array<string>) =>
+        set(() => ({ members: newMembers })),
     }),
     {
-      name: "cost-storage",
+      name: "nomikan-storage",
       storage: createJSONStorage(() => sessionStorage),
     }
   )

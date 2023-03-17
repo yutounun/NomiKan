@@ -15,6 +15,7 @@ function CostTextField({ setTmpMemberName, tmpMemberName }: Props) {
       type="string"
       variant="outlined"
       onChange={(e) => setTmpMemberName(e.target.value)}
+      sx={{ width: { lg: "40em" }, mr: { lg: 2 } }}
     />
   );
 }

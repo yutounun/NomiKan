@@ -1,6 +1,8 @@
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 import MemberInput from "components/AddMembers/Molecules/MemberInput";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteSweepIcon from "@mui/icons-material/DeleteSweep";
 
 class Props {
   setOpen!: (value: boolean) => void;
@@ -8,7 +10,7 @@ class Props {
 
 function Content({ setOpen }: Props) {
   // const [cost, setCost] = useCostStore((state) => [state.cost, state.setCost]);
-  const [localMemberNames, setLocalMemberNames] = useState<string[]>([""]);
+  const [localMemberNames, setLocalMemberNames] = useState<string[]>([]);
 
   const handleSetLocalMemberNames = (name: string) => {
     setLocalMemberNames((prevArray) => [...prevArray, name]);
@@ -29,13 +31,22 @@ function Content({ setOpen }: Props) {
   return (
     <Stack
       direction="column"
-      justifyContent="center"
       mt={10}
-      alignItems="center"
-      gap="70px"
+      gap="2em"
     >
+      {/* TextBox with Add Button */}
       <MemberInput handleSetLocalMemberNames={handleSetLocalMemberNames} />
-      <div>{localMemberNames}</div>
+
+      {/* members */}
+      <Stack justifyContent="left">
+        {localMemberNames.length > 0 ? localMemberNames.map((memberName) => (
+          <Stack flexDirection="row" mb={2}>
+            <Typography key={memberName} sx={{ width: { lg: "90%", xs: "70%" } }}>{memberName}</Typography>
+            <EditIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} />
+            <DeleteSweepIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} />
+          </Stack>
+        )) : <Typography fontSize={15} textAlign="center">メンバーを追加してください</Typography>}
+      </Stack>
 
       {/* 「登録」Button */}
       {/* <Link to="/add-members" style={{ textDecoration: "none", width: "100%" }}>

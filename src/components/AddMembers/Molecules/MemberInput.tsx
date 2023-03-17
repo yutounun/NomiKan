@@ -9,7 +9,13 @@ class Props {
 
 function Content({ handleSetLocalMemberNames }: Props) {
   const [tmpMemberName, setTmpMemberName] = useState<string>("");
+  const handleAddIconClick = () => {
+    // Add member name to the list
+    handleSetLocalMemberNames(tmpMemberName);
 
+    // Clear the input field
+    setTmpMemberName("");
+  };
   return (
     <Stack direction="row" justifyContent="center" alignItems="center">
       {/* TextBox for adding members */}
@@ -21,7 +27,7 @@ function Content({ handleSetLocalMemberNames }: Props) {
       {/* 「+」Icon */}
       <IconButton
         aria-label="delete"
-        onClick={() => handleSetLocalMemberNames(tmpMemberName)}
+        onClick={handleAddIconClick}
       >
         <AddCircleOutlineIcon fontSize="medium" color="primary" />
       </IconButton>

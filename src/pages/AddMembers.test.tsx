@@ -1,5 +1,4 @@
-import { fireEvent, getByRole, render, screen } from "@testing-library/react";
-import MyAlert from "components/Commons/Molecules/MyAlert";
+import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import AddMembers from "./AddMembers";
 
@@ -7,7 +6,7 @@ import AddMembers from "./AddMembers";
  * Requirements
  * 1. The component must be rendered in the DOM xx
  * 2. TextField component must be rendered with a placeholder xx
- * 3. Button component must be rendered xx
+ * 3. Reg Button component must be rendered xx
  * 4. AddButton component must be rendered xx
  * 5. If none of members is added, 「メンバーを登録してください」 must be displayed xx
  *    and the registration button must be disabled xx
@@ -20,6 +19,7 @@ import AddMembers from "./AddMembers";
  * 12. Editing on Member modal component works
  * 13. MyStepper component is rendered with the current step xx
  * 14. Renders MyAlert component after adding a new member xx
+ * 15. Shows "メンバー追加" on the title
  */
 
 describe("AddMembers page", () => {
@@ -186,8 +186,7 @@ describe("AddMembers page", () => {
 
     expect(screen.getByText("Yuto")).toBeInTheDocument();
 
-    const textEditField =
-      screen.getByPlaceholderText("メンバーを編集してください");
+    const textEditField = screen.getByPlaceholderText("メンバーを編集してください");
     fireEvent.change(textEditField, { target: { value: "Taka" } });
     expect(screen.getByText("Taka")).toBeInTheDocument();
 
@@ -233,8 +232,7 @@ describe("AddMembers page", () => {
 
     expect(screen.getByText("Yuto")).toBeInTheDocument();
 
-    const textEditField =
-      screen.getByPlaceholderText("メンバーを編集してください");
+    const textEditField = screen.getByPlaceholderText("メンバーを編集してください");
     fireEvent.change(textEditField, { target: { value: "Taka" } });
     expect(screen.getByText("Taka")).toBeInTheDocument();
 
@@ -273,5 +271,14 @@ describe("AddMembers page", () => {
     );
 
     expect(screen.getByText("メンバーを追加しました！")).toBeInTheDocument();
+  });
+
+  it("Shows 'メンバー追加' on the title", () => {
+    render(<AddMembers />);
+    const header = screen.getByRole("heading", {
+      name: /メンバー追加/i,
+    });
+
+    expect(header).toBeInTheDocument();
   });
 });

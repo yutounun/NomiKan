@@ -1,0 +1,22 @@
+import { TextField } from "@mui/material";
+import React from "react";
+
+class Props {
+  setTmpMemberName!: (value: string) => void;
+
+  tmpMemberName: string | undefined;
+}
+function CostTextField({ setTmpMemberName, tmpMemberName }: Props) {
+  return (
+    <TextField
+      label="メンバーを追加"
+      value={tmpMemberName}
+      size="small"
+      type="string"
+      variant="outlined"
+      onChange={(e) => setTmpMemberName(e.target.value)}
+    />
+  );
+}
+
+export default CostTextField;

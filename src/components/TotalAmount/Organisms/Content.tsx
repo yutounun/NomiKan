@@ -1,6 +1,7 @@
 import { Stack } from "@mui/material";
 import MyButton from "components/Commons/Atoms/MyButton";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useCostStore } from "stores/cost";
 import CostTextField from "../Atoms/CostTextField";
 
@@ -35,13 +36,15 @@ function Content({ onOpen }: Props) {
       gap="70px"
     >
       <CostTextField setLocalCost={setLocalCost} value={localCost} />
-      <MyButton
-        onClick={handleClickButton}
-        disabled={localCost === ""}
-        value="登録"
-        variant="contained"
-        sx={{ borderRadius: "30px", width: "100%" }}
-      />
+      <Link to="/add-members" style={{ textDecoration: "none", width: "100%" }}>
+        <MyButton
+          onClick={handleClickButton}
+          disabled={localCost === ""}
+          value="登録"
+          variant="contained"
+          sx={{ borderRadius: "30px", width: "100%" }}
+        />
+      </Link>
     </Stack>
   );
 }

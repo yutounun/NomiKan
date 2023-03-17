@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddMembers page takes a snapshot 1`] = `
+<DocumentFragment>
+  <main
+    data-testid="main"
+  >
+    <div
+      class="MuiStack-root css-w004l2-MuiStack-root"
+    >
+      <div
+        class="MuiStack-root css-muz5cb-MuiStack-root"
+        data-testid="header"
+      >
+        <h1
+          class="MuiTypography-root MuiTypography-h1 css-o2w69a-MuiTypography-root"
+        >
+          メンバー追加
+        </h1>
+      </div>
+      <div
+        class="MuiStack-root css-1rh9169-MuiStack-root"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="ArrowBackIosIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiBox-root css-pb02ub"
+      >
+        <div
+          class="MuiStepper-root MuiStepper-horizontal MuiStepper-alternativeLabel css-10mg1vw-MuiStepper-root"
+          data-testid="stepper"
+        >
+          <div
+            class="MuiStep-root MuiStep-horizontal MuiStep-alternativeLabel Mui-completed css-n7tliy-MuiStep-root"
+          >
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal MuiStepLabel-alternativeLabel css-ascpo7-MuiStepLabel-root"
+              data-testid="合計金額"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-completed MuiStepLabel-alternativeLabel css-vnkopk-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-completed css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+                  data-testid="CheckCircleIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-2 17l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L19 8l-9 9z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer MuiStepLabel-alternativeLabel css-1vyamtt-MuiStepLabel-labelContainer"
+              >
+                <span
+                  class="MuiStepLabel-label Mui-completed MuiStepLabel-alternativeLabel css-1hv8oq8-MuiStepLabel-label"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+                  >
+                    合計金額
+                  </p>
+                </span>
+              </span>
+            </span>
+          </div>
+          <div
+            class="MuiStep-root MuiStep-horizontal MuiStep-alternativeLabel css-n7tliy-MuiStep-root"
+          >
+            <div
+              class="MuiStepConnector-root MuiStepConnector-horizontal MuiStepConnector-alternativeLabel Mui-active css-zpcwqm-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+              />
+            </div>
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal MuiStepLabel-alternativeLabel css-ascpo7-MuiStepLabel-root"
+              data-testid="メンバー追加"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-active MuiStepLabel-alternativeLabel css-vnkopk-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="12"
+                  />
+                  <text
+                    class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                    dominant-baseline="central"
+                    text-anchor="middle"
+                    x="12"
+                    y="12"
+                  >
+                    2
+                  </text>
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer MuiStepLabel-alternativeLabel css-1vyamtt-MuiStepLabel-labelContainer"
+              >
+                <span
+                  class="MuiStepLabel-label Mui-active MuiStepLabel-alternativeLabel css-1hv8oq8-MuiStepLabel-label"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+                  >
+                    メンバー追加
+                  </p>
+                </span>
+              </span>
+            </span>
+          </div>
+          <div
+            class="MuiStep-root MuiStep-horizontal MuiStep-alternativeLabel css-n7tliy-MuiStep-root"
+          >
+            <div
+              class="MuiStepConnector-root MuiStepConnector-horizontal MuiStepConnector-alternativeLabel Mui-disabled css-zpcwqm-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+              />
+            </div>
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled MuiStepLabel-alternativeLabel css-ascpo7-MuiStepLabel-root"
+              data-testid="割合入力"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-disabled MuiStepLabel-alternativeLabel css-vnkopk-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="12"
+                  />
+                  <text
+                    class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                    dominant-baseline="central"
+                    text-anchor="middle"
+                    x="12"
+                    y="12"
+                  >
+                    3
+                  </text>
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer MuiStepLabel-alternativeLabel css-1vyamtt-MuiStepLabel-labelContainer"
+              >
+                <span
+                  class="MuiStepLabel-label Mui-disabled MuiStepLabel-alternativeLabel css-1hv8oq8-MuiStepLabel-label"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+                  >
+                    割合入力
+                  </p>
+                </span>
+              </span>
+            </span>
+          </div>
+          <div
+            class="MuiStep-root MuiStep-horizontal MuiStep-alternativeLabel css-n7tliy-MuiStep-root"
+          >
+            <div
+              class="MuiStepConnector-root MuiStepConnector-horizontal MuiStepConnector-alternativeLabel Mui-disabled css-zpcwqm-MuiStepConnector-root"
+            >
+              <span
+                class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+              />
+            </div>
+            <span
+              class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled MuiStepLabel-alternativeLabel css-ascpo7-MuiStepLabel-root"
+              data-testid="結果"
+            >
+              <span
+                class="MuiStepLabel-iconContainer Mui-disabled MuiStepLabel-alternativeLabel css-vnkopk-MuiStepLabel-iconContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="12"
+                  />
+                  <text
+                    class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                    dominant-baseline="central"
+                    text-anchor="middle"
+                    x="12"
+                    y="12"
+                  >
+                    4
+                  </text>
+                </svg>
+              </span>
+              <span
+                class="MuiStepLabel-labelContainer MuiStepLabel-alternativeLabel css-1vyamtt-MuiStepLabel-labelContainer"
+              >
+                <span
+                  class="MuiStepLabel-label Mui-disabled MuiStepLabel-alternativeLabel css-1hv8oq8-MuiStepLabel-label"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+                  >
+                    結果
+                  </p>
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiStack-root css-1im4rj0-MuiStack-root"
+      >
+        <div
+          class="MuiStack-root css-7owdng-MuiStack-root"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              for=":r1:"
+              id=":r1:-label"
+            >
+              メンバーを追加
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
+                id=":r1:"
+                type="string"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-yjsfm1"
+                >
+                  <span>
+                    メンバーを追加
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <button
+            aria-label="delete"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-ci5apu-MuiSvgIcon-root"
+              data-testid="AddCircleOutlineIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div />
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;

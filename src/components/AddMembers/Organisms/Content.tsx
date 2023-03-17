@@ -15,20 +15,18 @@ function Content({ setOpen }: Props) {
   const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
   const [localMemberNames, setLocalMemberNames] = useState<string[]>(members);
 
+  /** Set members on the list and open the alert */
   const handleSetLocalMemberNames = (name: string) => {
     setLocalMemberNames((prevArray) => [...prevArray, name]);
-  };
-  /** save cost to Zustand store */
-
-  const handleClickRegButton = () => {
-    // set input cost on Session storage
-    setMembers(localMemberNames);
 
     // open the alert
     setOpen(true);
+  };
 
-    // clear input cost
-    // setLocalCost("");
+  /** save members to Zustand store */
+  const handleClickRegButton = () => {
+    // set input cost on Session storage
+    setMembers(localMemberNames);
   };
 
   return (
@@ -42,9 +40,9 @@ function Content({ setOpen }: Props) {
 
       {/* members */}
       <Stack justifyContent="left">
-        {localMemberNames.length > 0 ? localMemberNames.map((memberName) => (
-          <Stack flexDirection="row" mb={2}>
-            <Typography key={memberName} sx={{ width: { lg: "90%", xs: "70%" } }}>{memberName}</Typography>
+        {localMemberNames.length > 0 ? localMemberNames.map((memberName, index) => (
+          <Stack flexDirection="row" mb={2} key={memberName}>
+            <Typography sx={{ width: { lg: "90%", xs: "70%" } }}>{memberName}</Typography>
             <EditIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} />
             <DeleteSweepIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} />
           </Stack>

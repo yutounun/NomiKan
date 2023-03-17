@@ -11,7 +11,7 @@ class Props {
 }
 
 function Content({ setOpen }: Props) {
-  // const [cost, setCost] = useCostStore((state) => [state.cost, state.setCost]);
+  // const [cost, setCost] = useNomikanStore((state) => [state.cost, state.setCost]);
   const [localMemberNames, setLocalMemberNames] = useState<string[]>([]);
 
   const handleSetLocalMemberNames = (name: string) => {

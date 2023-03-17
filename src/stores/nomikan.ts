@@ -6,13 +6,14 @@ import { persist, createJSONStorage } from "zustand/middleware";
 
 interface State {
   cost: number | string | undefined;
+
 }
 
 interface Action {
   setCost: (newCost: number | string | undefined) => void;
 }
 
-export const useCostStore = create<State & Action>()(
+export const useNomikanStore = create<State & Action>()(
   // Store cost data in session storage
   persist(
     (set) => ({
@@ -28,5 +29,5 @@ export const useCostStore = create<State & Action>()(
 );
 
 // Tool to display the zustand store data in the devtools
-mountStoreDevtool("Store", useCostStore);
-export default useCostStore;
+mountStoreDevtool("Store", useNomikanStore);
+export default useNomikanStore;

@@ -2,7 +2,7 @@ import { Stack } from "@mui/material";
 import MyButton from "components/Commons/Atoms/MyButton";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCostStore } from "stores/cost";
+import { useNomikanStore } from "stores/nomikan";
 import CostTextField from "../Atoms/CostTextField";
 
 class Props {
@@ -10,7 +10,7 @@ class Props {
 }
 
 function Content({ onOpen }: Props) {
-  const [cost, setCost] = useCostStore((state) => [state.cost, state.setCost]);
+  const [cost, setCost] = useNomikanStore((state) => [state.cost, state.setCost]);
   const [localCost, setLocalCost] = useState<number | string | undefined>("");
 
   console.log(cost);

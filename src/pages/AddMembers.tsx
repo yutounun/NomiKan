@@ -10,6 +10,10 @@ import MyAlert from "components/Commons/Molecules/MyAlert";
 function AddMembers() {
   const [open, setOpen] = useState(false);
 
+  const handleCloseAlert = () => {
+    setOpen(false);
+  };
+
   return (
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
@@ -23,7 +27,7 @@ function AddMembers() {
         <Content setOpen={setOpen} />
 
         {/* Alert for the completion of registration  */}
-        <MyAlert parentOpen={open} value="メンバーを追加しました！" />
+        <MyAlert parentOpen={open} value="メンバーを追加しました！" onClose={handleCloseAlert} />
       </Stack>
     </BaseLayout>
   );

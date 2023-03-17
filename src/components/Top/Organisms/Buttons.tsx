@@ -30,7 +30,7 @@ function Buttons() {
   return (
     <Stack direction="column" gap={2} pt={3} justifyContent="center">
       {buttons.map((button) => (
-        <Link to={button.to} style={{ textDecoration: "none" }}>
+        <Link key={button.label} to={button.to} style={{ textDecoration: "none" }}>
           <MyButton
             startIcon={button.icon}
             variant="outlined"

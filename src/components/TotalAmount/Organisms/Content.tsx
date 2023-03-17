@@ -11,9 +11,7 @@ class Props {
 
 function Content({ onOpen }: Props) {
   const [cost, setCost] = useNomikanStore((state) => [state.cost, state.setCost]);
-  const [localCost, setLocalCost] = useState<number | string | undefined>("");
-
-  console.log(cost);
+  const [localCost, setLocalCost] = useState<number | string | undefined>(cost);
 
   /** save cost to Zustand store */
   const handleClickButton = () => {

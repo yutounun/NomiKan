@@ -6,25 +6,22 @@ class Props {
   parentOpen = false;
 
   value = "";
+
+  onClose?: () => void;
 }
-function MyAlert({ parentOpen, value }: Props) {
+function MyAlert({ parentOpen, value, onClose }: Props) {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     setOpen(parentOpen);
   }, [parentOpen]);
 
-  /** close the snack bar */
-  const handleOnClose = () => {
-    setOpen(false);
-  };
-
   return (
     <Snackbar
       anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       open={open}
-      onClose={handleOnClose}
+      onClose={onClose}
     >
-      <Alert onClose={handleOnClose} sx={{ width: "100%" }}>
+      <Alert onClose={onClose} sx={{ width: "100%" }}>
         {value}
       </Alert>
     </Snackbar>

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import MemberInput from "components/AddMembers/Molecules/MemberInput";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteSweepIcon from "@mui/icons-material/DeleteSweep";
+import MyButton from "components/Commons/Atoms/MyButton";
+import { Link } from "react-router-dom";
 
 class Props {
   setOpen!: (value: boolean) => void;
@@ -17,16 +19,16 @@ function Content({ setOpen }: Props) {
   };
   /** save cost to Zustand store */
 
-  // const handleClickButton = () => {
-  //   // set input cost on Session storage
-  //   setCost(localCost);
+  const handleClickRegButton = () => {
+    // set input cost on Session storage
+    // setCost(localCost);
 
-  //   // open the alert
-  //   setOpen(true);
+    // open the alert
+    setOpen(true);
 
-  //   // clear input cost
-  //   setLocalCost("");
-  // };
+    // clear input cost
+    // setLocalCost("");
+  };
 
   return (
     <Stack
@@ -49,15 +51,16 @@ function Content({ setOpen }: Props) {
       </Stack>
 
       {/* 「登録」Button */}
-      {/* <Link to="/add-members" style={{ textDecoration: "none", width: "100%" }}>
+      <Link to="/add-members" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>
         <MyButton
-          onClick={handleClickButton}
-          disabled={localCost === ""}
+          data-testid="reg-button"
+          onClick={handleClickRegButton}
+          disabled={localMemberNames.length === 0}
           value="登録"
           variant="contained"
-          sx={{ borderRadius: "30px", width: "100%" }}
+          sx={{ borderRadius: "30px", width: { xs: "80%", md: "50%" } }}
         />
-      </Link> */}
+      </Link>
     </Stack>
   );
 }

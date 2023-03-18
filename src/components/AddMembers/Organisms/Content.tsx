@@ -10,21 +10,35 @@ import { useNomikanStore } from "stores/nomikan";
 
 class Props {
   setOpen!: (value: boolean) => void;
+
+  setAlertLabel!: (value: string) => void;
 }
 
-function Content({ setOpen }: Props) {
+function Content({ setOpen, setAlertLabel }: Props) {
   const [openModal, setOpenModal] = useState(false);
   const [editIndex, setEditIndex] = useState(0);
   const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
   const [localMemberNames, setLocalMemberNames] = useState<string[]>(members);
 
   /** Set members on the list and open the alert */
-  const handleSetLocalMemberNames = (name: string) => {
-    setLocalMemberNames((prevArray) => [...prevArray, name]);
-    setMembers(localMemberNames);
+  const handleSetLocalMemberNames = (newName: string) => {
+    let isExisting = false;
 
-    // open the alert
-    setOpen(true);
+    localMemberNames.forEach((name, index) => {
+      if (name === newName) {
+        isExisting = true;
+      }
+    });
+
+    if (isExisting) {
+      setAlertLabel("同じ名前のメンバーが存在します。");
+      setOpen(true);
+    } else {
+      setOpen(true);
+      setAlertLabel("メンバーを追加しました！");
+      setLocalMemberNames((prevArray) => [...prevArray, newName]);
+      setMembers(localMemberNames);
+    }
   };
 
   /** save members to Zustand store */
@@ -37,6 +51,10 @@ function Content({ setOpen }: Props) {
   const removeMember = (index: number) => {
     const filteredNames = localMemberNames.filter((name, i) => i !== index);
     setLocalMemberNames(filteredNames);
+
+    // open the alert
+    setOpen(true);
+    setAlertLabel("メンバーを削除しました！");
   };
 
   const onHandleEdit = (index: number) => {

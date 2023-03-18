@@ -1,7 +1,6 @@
 import { Modal, Stack, TextField, Typography } from "@mui/material";
 import MyButton from "components/Commons/Atoms/MyButton";
-import React, { useState } from "react";
-import { useNomikanStore } from "stores/nomikan";
+import React from "react";
 
 class Props {
   setOpenModal!: (value: boolean) => void;
@@ -9,12 +8,15 @@ class Props {
   openModal!: boolean;
 
   editIndex!: number;
+
+  setLocalMemberNames!: (value: string[]) => void;
+
+  localMemberNames!: string[];
 }
 
-function Content({ openModal, setOpenModal, editIndex }: Props) {
-  const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
-  const [localMemberNames, setLocalMemberNames] = useState<string[]>();
-
+function Content({
+  openModal, setOpenModal, editIndex, setLocalMemberNames, localMemberNames
+}: Props) {
   const handleClose = () => {
     setOpenModal(false);
   };
@@ -22,7 +24,7 @@ function Content({ openModal, setOpenModal, editIndex }: Props) {
   const handleClickRegButton = () => {
     if (localMemberNames) {
       // set input cost on Session storage
-      setMembers(localMemberNames);
+      setLocalMemberNames(localMemberNames);
       handleClose();
     }
   };
@@ -43,7 +45,7 @@ function Content({ openModal, setOpenModal, editIndex }: Props) {
 
   const onHandleEditName = (name: string) => {
     // console.log(name);
-    const filteredMembers: string[] = members.map((member: string, index) => {
+    const filteredMembers: string[] = localMemberNames.map((member: string, index) => {
       if (index === editIndex) {
         return name;
       }

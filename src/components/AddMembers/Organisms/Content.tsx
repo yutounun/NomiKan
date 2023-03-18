@@ -29,6 +29,12 @@ function Content({ setOpen }: Props) {
     setMembers(localMemberNames);
   };
 
+  // remove the member from the list
+  const removeMember = (index: number) => {
+    const filteredNames = localMemberNames.filter((name, i) => i !== index);
+    setLocalMemberNames(filteredNames);
+  };
+
   return (
     <Stack
       direction="column"
@@ -43,8 +49,8 @@ function Content({ setOpen }: Props) {
         {localMemberNames.length > 0 ? localMemberNames.map((memberName, index) => (
           <Stack flexDirection="row" mb={2} key={memberName}>
             <Typography sx={{ width: { lg: "90%", xs: "70%" } }}>{memberName}</Typography>
-            <EditIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} />
-            <DeleteSweepIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} />
+            <EditIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} onClick={() => console.log("test")} />
+            <DeleteSweepIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} onClick={() => removeMember(index)} />
           </Stack>
         )) : <Typography fontSize={15} textAlign="center">メンバーを追加してください</Typography>}
       </Stack>
@@ -57,7 +63,7 @@ function Content({ setOpen }: Props) {
           disabled={localMemberNames.length === 0}
           value="登録"
           variant="contained"
-          sx={{ borderRadius: "30px", width: { xs: "80%", md: "50%" } }}
+          sx={{ borderRadius: "30px", width: { xs: "80%", md: "50%" }, height: { md: "3em" } }}
         />
       </Link>
     </Stack>

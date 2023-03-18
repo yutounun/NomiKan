@@ -21,13 +21,24 @@ function Content({ setOpen, setAlertLabel }: Props) {
   const [localMemberNames, setLocalMemberNames] = useState<string[]>(members);
 
   /** Set members on the list and open the alert */
-  const handleSetLocalMemberNames = (name: string) => {
-    setLocalMemberNames((prevArray) => [...prevArray, name]);
-    setMembers(localMemberNames);
+  const handleSetLocalMemberNames = (newName: string) => {
+    let isExisting = false;
 
-    // open the alert
-    setOpen(true);
-    setAlertLabel("メンバーを追加しました！");
+    localMemberNames.forEach((name, index) => {
+      if (name === newName) {
+        isExisting = true;
+      }
+    });
+
+    if (isExisting) {
+      setAlertLabel("同じ名前のメンバーが存在します。");
+      setOpen(true);
+    } else {
+      setOpen(true);
+      setAlertLabel("メンバーを追加しました！");
+      setLocalMemberNames((prevArray) => [...prevArray, newName]);
+      setMembers(localMemberNames);
+    }
   };
 
   /** save members to Zustand store */

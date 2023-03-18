@@ -1,12 +1,11 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import React, { useState } from "react";
 import MemberInput from "components/AddMembers/Molecules/MemberInput";
-import EditIcon from "@mui/icons-material/Edit";
 import EditModal from "components/AddMembers/Organisms/EditModal";
-import DeleteSweepIcon from "@mui/icons-material/DeleteSweep";
 import MyButton from "components/Commons/Atoms/MyButton";
 import { Link } from "react-router-dom";
 import { useNomikanStore } from "stores/nomikan";
+import MembersList from "components/AddMembers/Organisms/MembersList";
 
 class Props {
   setOpen!: (value: boolean) => void;
@@ -22,15 +21,17 @@ function Content({ setOpen, setAlertLabel }: Props) {
 
   /** Set members on the list and open the alert */
   const handleSetLocalMemberNames = (newName: string) => {
-    let isExisting = false;
+    let isDuplicated = false;
 
-    localMemberNames.forEach((name, index) => {
+    localMemberNames.forEach((name) => {
       if (name === newName) {
-        isExisting = true;
+        isDuplicated = true;
       }
     });
 
-    if (isExisting) {
+    // if input name is duplicated, pop up the warning
+    // if not pop up the information to the user
+    if (isDuplicated) {
       setAlertLabel("同じ名前のメンバーが存在します。");
       setOpen(true);
     } else {
@@ -72,15 +73,11 @@ function Content({ setOpen, setAlertLabel }: Props) {
       <MemberInput handleSetLocalMemberNames={handleSetLocalMemberNames} />
 
       {/* members */}
-      <Stack justifyContent="left">
-        {localMemberNames.length > 0 ? localMemberNames.map((memberName, index) => (
-          <Stack flexDirection="row" mb={2} key={memberName}>
-            <Typography sx={{ width: { lg: "90%", xs: "70%" } }}>{memberName}</Typography>
-            <EditIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} onClick={() => onHandleEdit(index)} />
-            <DeleteSweepIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} onClick={() => removeMember(index)} />
-          </Stack>
-        )) : <Typography fontSize={15} textAlign="center">メンバーを追加してください</Typography>}
-      </Stack>
+      <MembersList
+        localMemberNames={localMemberNames}
+        onHandleEdit={onHandleEdit}
+        removeMember={removeMember}
+      />
 
       {/* 「登録」Button */}
       <Link to="/add-members" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>

@@ -69,6 +69,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
       direction="column"
       mt={10}
       gap="2em"
+      sx={{ maxWidth: "80%" }}
     >
       {/* TextBox with Add Button */}
       <MemberInput handleSetLocalMemberNames={handleSetLocalMemberNames} />

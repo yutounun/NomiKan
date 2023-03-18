@@ -10,9 +10,11 @@ import { useNomikanStore } from "stores/nomikan";
 
 class Props {
   setOpen!: (value: boolean) => void;
+
+  setAlertLabel!: (value: string) => void;
 }
 
-function Content({ setOpen }: Props) {
+function Content({ setOpen, setAlertLabel }: Props) {
   const [openModal, setOpenModal] = useState(false);
   const [editIndex, setEditIndex] = useState(0);
   const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
@@ -25,6 +27,7 @@ function Content({ setOpen }: Props) {
 
     // open the alert
     setOpen(true);
+    setAlertLabel("メンバーを追加しました！");
   };
 
   /** save members to Zustand store */
@@ -37,6 +40,10 @@ function Content({ setOpen }: Props) {
   const removeMember = (index: number) => {
     const filteredNames = localMemberNames.filter((name, i) => i !== index);
     setLocalMemberNames(filteredNames);
+
+    // open the alert
+    setOpen(true);
+    setAlertLabel("メンバーを削除しました！");
   };
 
   const onHandleEdit = (index: number) => {

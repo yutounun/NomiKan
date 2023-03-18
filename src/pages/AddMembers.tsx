@@ -10,6 +10,7 @@ import MyAlert from "components/Commons/Molecules/MyAlert";
 
 function AddMembers() {
   const [open, setOpen] = useState(false);
+  const [alertLabel, setAlertLabel] = useState("");
 
   const handleCloseAlert = () => {
     setOpen(false);
@@ -25,10 +26,10 @@ function AddMembers() {
         <MyStepper activeStep={1} />
 
         {/* Content including input and button */}
-        <Content setOpen={setOpen} />
+        <Content setOpen={setOpen} setAlertLabel={setAlertLabel} />
 
         {/* Alert for the completion of registration  */}
-        <MyAlert parentOpen={open} value="メンバーを追加しました！" onClose={handleCloseAlert} />
+        <MyAlert parentOpen={open} value={alertLabel} onClose={handleCloseAlert} />
 
       </Stack>
     </BaseLayout>

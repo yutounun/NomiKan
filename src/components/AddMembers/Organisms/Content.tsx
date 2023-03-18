@@ -6,6 +6,7 @@ import MyButton from "components/Commons/Atoms/MyButton";
 import { Link } from "react-router-dom";
 import { useNomikanStore } from "stores/nomikan";
 import MembersList from "components/AddMembers/Organisms/MembersList";
+import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 
 class Props {
   setOpen!: (value: boolean) => void;
@@ -68,6 +69,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
       direction="column"
       mt={10}
       gap="2em"
+      sx={{ maxWidth: "80%" }}
     >
       {/* TextBox with Add Button */}
       <MemberInput handleSetLocalMemberNames={handleSetLocalMemberNames} />
@@ -82,6 +84,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
       {/* 「登録」Button */}
       <Link to="/add-members" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>
         <MyButton
+          startIcon={<DoneOutlineIcon />}
           data-testid="reg-button"
           onClick={handleClickRegButton}
           disabled={localMemberNames.length === 0}

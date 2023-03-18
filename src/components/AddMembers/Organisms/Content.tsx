@@ -1,5 +1,5 @@
 import { Stack, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import MemberInput from "components/AddMembers/Molecules/MemberInput";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteSweepIcon from "@mui/icons-material/DeleteSweep";
@@ -9,15 +9,22 @@ import { useNomikanStore } from "stores/nomikan";
 
 class Props {
   setOpen!: (value: boolean) => void;
+
+  setOpenModal!: (value: boolean) => void;
+
+  setEditIndex!: (value: number) => void;
 }
 
-function Content({ setOpen }: Props) {
+function Content({ setOpen, setOpenModal, setEditIndex }: Props) {
   const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
   const [localMemberNames, setLocalMemberNames] = useState<string[]>(members);
+
+  useMemo(() => setLocalMemberNames(members), [members]);
 
   /** Set members on the list and open the alert */
   const handleSetLocalMemberNames = (name: string) => {
     setLocalMemberNames((prevArray) => [...prevArray, name]);
+    setMembers(localMemberNames);
 
     // open the alert
     setOpen(true);
@@ -35,6 +42,11 @@ function Content({ setOpen }: Props) {
     setLocalMemberNames(filteredNames);
   };
 
+  const onHandleEdit = (index: number) => {
+    setEditIndex(index);
+    setOpenModal(true);
+  };
+
   return (
     <Stack
       direction="column"
@@ -49,7 +61,7 @@ function Content({ setOpen }: Props) {
         {localMemberNames.length > 0 ? localMemberNames.map((memberName, index) => (
           <Stack flexDirection="row" mb={2} key={memberName}>
             <Typography sx={{ width: { lg: "90%", xs: "70%" } }}>{memberName}</Typography>
-            <EditIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} onClick={() => console.log("test")} />
+            <EditIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} onClick={() => onHandleEdit(index)} />
             <DeleteSweepIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} onClick={() => removeMember(index)} />
           </Stack>
         )) : <Typography fontSize={15} textAlign="center">メンバーを追加してください</Typography>}

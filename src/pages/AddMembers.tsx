@@ -5,6 +5,7 @@ import BaseLayout from "components/Commons/Layout/BaseLayout";
 import MyHeader from "components/Commons/Organisms/MyHeader";
 import MyStepper from "components/Commons/Organisms/MyStepper";
 import Content from "components/AddMembers/Organisms/Content";
+
 import MyAlert from "components/Commons/Molecules/MyAlert";
 
 function AddMembers() {
@@ -28,6 +29,7 @@ function AddMembers() {
 
         {/* Alert for the completion of registration  */}
         <MyAlert parentOpen={open} value="メンバーを追加しました！" onClose={handleCloseAlert} />
+
       </Stack>
     </BaseLayout>
   );

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, cleanup } from "@testing-library/react";
 import React from "react";
 import TotalAmount from "./TotalAmount";
 
@@ -15,6 +15,13 @@ import TotalAmount from "./TotalAmount";
  */
 
 describe("TotalAmount", () => {
+  afterEach(() => cleanup());
+
+  it("doesn't allow user to click Button when Input is empty", () => {
+    render(<TotalAmount />);
+    expect(screen.getByRole("button", { name: /登録/i })).toBeDisabled();
+  });
+
   it("renders correctly", () => {
     render(<TotalAmount />);
   });
@@ -74,11 +81,6 @@ describe("TotalAmount", () => {
     expect(buttonElem).toBeInTheDocument();
   });
 
-  it("doesn't allow user to click Button when Input is empty", () => {
-    render(<TotalAmount />);
-    expect(screen.getByRole("button", { name: /登録/i })).toBeDisabled();
-  });
-
   it("sets the Active step on Stepper to be 0", () => {
     render(<TotalAmount />);
     const stepperElem = screen.getByTestId("合計金額");
@@ -107,8 +109,8 @@ describe("TotalAmount", () => {
       })
     );
 
-    expect(window.sessionStorage.getItem("cost-storage")).toEqual(
-      '{"state":{"cost":"500"},"version":0}'
+    expect(window.sessionStorage.getItem("nomikan-storage")).toEqual(
+      "{\"state\":{\"cost\":\"500\",\"members\":[]},\"version\":0}"
     );
   });
 });

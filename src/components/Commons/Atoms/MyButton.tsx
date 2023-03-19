@@ -24,10 +24,13 @@ class Props {
   startIcon?: React.ReactNode;
 
   sx?: object;
+
+  dataTestid?: string;
 }
 function MyButton({
   onClick,
   variant,
+  dataTestid,
   color,
   size,
   disabled,
@@ -38,13 +41,13 @@ function MyButton({
   return (
     <Button
       onClick={onClick}
-      data-testid="button"
       variant={variant}
       color={color}
       size={size}
       disabled={disabled}
       startIcon={startIcon}
       sx={sx}
+      data-testid={dataTestid}
     >
       {value}
     </Button>

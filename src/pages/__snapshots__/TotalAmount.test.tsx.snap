@@ -260,8 +260,8 @@ exports[`TotalAmount takes a snapshot 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for=":r1:"
-            id=":r1:-label"
+            for=":r2:"
+            id=":r2:-label"
           >
             金額を入力してね
           </label>
@@ -271,7 +271,7 @@ exports[`TotalAmount takes a snapshot 1`] = `
             <input
               aria-invalid="false"
               class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":r1:"
+              id=":r2:"
               type="number"
               value=""
             />
@@ -289,15 +289,19 @@ exports[`TotalAmount takes a snapshot 1`] = `
             </fieldset>
           </div>
         </div>
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-16woavu-MuiButtonBase-root-MuiButton-root"
-          data-testid="button"
-          disabled=""
-          tabindex="-1"
-          type="button"
+        <a
+          href="/add-members"
+          style="text-decoration: none; width: 100%;"
         >
-          登録
-        </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-16woavu-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            登録
+          </button>
+        </a>
       </div>
     </div>
   </main>

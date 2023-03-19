@@ -211,6 +211,7 @@ describe("AddMembers page", () => {
   });
 
   it("close edit modal without updating", () => {
+    render(<AddMembers />);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
       name: /メンバーを追加/i

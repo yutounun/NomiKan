@@ -1,4 +1,4 @@
-import { fireEvent, prettyDOM, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import AddMembers from "./AddMembers";
 

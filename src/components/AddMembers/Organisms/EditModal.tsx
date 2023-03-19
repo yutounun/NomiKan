@@ -1,4 +1,4 @@
-import { Box, Modal, Stack, TextField, Typography } from "@mui/material";
+import { Modal, Stack, TextField, Typography } from "@mui/material";
 import MyButton from "components/Commons/Atoms/MyButton";
 import React, { useState } from "react";
 

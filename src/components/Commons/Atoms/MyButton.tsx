@@ -41,7 +41,6 @@ function MyButton({
   return (
     <Button
       onClick={onClick}
-      data-testid="button"
       variant={variant}
       color={color}
       size={size}

@@ -4,7 +4,8 @@ import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
 import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
 import MyButton from "components/Commons/Atoms/MyButton";
-import { Link } from "react-router-dom";
+// TODO: use Link instead of <a>
+// import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
 
 function Buttons() {
@@ -30,7 +31,7 @@ function Buttons() {
   return (
     <Stack direction="column" gap={2} pt={3} justifyContent="center">
       {buttons.map((button) => (
-        <Link key={button.label} to={button.to} style={{ textDecoration: "none" }}>
+        <a key={button.label} href={button.to} style={{ textDecoration: "none" }}>
           <MyButton
             startIcon={button.icon}
             variant="outlined"
@@ -39,7 +40,7 @@ function Buttons() {
             size="large"
             sx={{ borderRadius: "10px", width: "200px" }}
           />
-        </Link>
+        </a>
       ))}
     </Stack>
   );

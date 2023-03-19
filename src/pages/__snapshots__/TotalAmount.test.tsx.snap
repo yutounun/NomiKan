@@ -295,7 +295,6 @@ exports[`TotalAmount takes a snapshot 1`] = `
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-16woavu-MuiButtonBase-root-MuiButton-root"
-            data-testid="button"
             disabled=""
             tabindex="-1"
             type="button"

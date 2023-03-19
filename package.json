@@ -31,7 +31,7 @@
     "dev": "NODE_ENV=development react-scripts start",
     "prod": "NODE_ENV=production react-scripts start",
     "build": "NODE_ENV=development react-scripts build",
-    "test:local": "NODE_ENV=local react-scripts test",
+    "test:local": "NODE_ENV=local react-scripts test ",
     "test:dev": "NODE_ENV=development react-scripts test",
     "test:prod": "NODE_ENV=production react-scripts test",
     "eject": "react-scripts eject",

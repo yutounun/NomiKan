@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import MemberInput from "components/AddMembers/Molecules/MemberInput";
 import EditModal from "components/AddMembers/Organisms/EditModal";
 import MyButton from "components/Commons/Atoms/MyButton";
-import { Link } from "react-router-dom";
+// TODO: use Link instead of <a>
+// import { Link } from "react-router-dom";
 import { useNomikanStore } from "stores/nomikan";
 import MembersList from "components/AddMembers/Organisms/MembersList";
 import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
@@ -82,17 +83,16 @@ function Content({ setOpen, setAlertLabel }: Props) {
       />
 
       {/* 「登録」Button */}
-      <Link to="/add-members" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>
+      <a href="/add-members" data-testid="reg-btn" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>
         <MyButton
           startIcon={<DoneOutlineIcon />}
-          data-testid="reg-button"
           onClick={handleClickRegButton}
           disabled={localMemberNames.length === 0}
           value="登録"
           variant="contained"
           sx={{ borderRadius: "30px", width: { xs: "80%", md: "50%" }, height: { md: "3em" } }}
         />
-      </Link>
+      </a>
 
       <EditModal
         editIndex={editIndex}

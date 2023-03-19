@@ -29,7 +29,7 @@ function Content({ handleSetLocalMemberNames }: Props) {
         aria-label="delete"
         onClick={handleAddIconClick}
       >
-        <AddCircleOutlineIcon fontSize="medium" color="primary" />
+        <AddCircleOutlineIcon data-testid="add-member-btn" fontSize="medium" color="primary" />
       </IconButton>
     </Stack>
   );

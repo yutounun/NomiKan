@@ -1,6 +1,6 @@
-import { Modal, Stack, TextField, Typography } from "@mui/material";
+import { Box, Modal, Stack, TextField, Typography } from "@mui/material";
 import MyButton from "components/Commons/Atoms/MyButton";
-import React from "react";
+import React, { useState } from "react";
 
 class Props {
   setOpenModal!: (value: boolean) => void;
@@ -24,7 +24,13 @@ function Content({
   const handleClickRegButton = () => {
     if (localMemberNames) {
       // set input cost on Session storage
-      setLocalMemberNames(localMemberNames);
+      const filteredMembers: string[] = localMemberNames.map((member: string, index) => {
+        if (index === editIndex) {
+          return editName;
+        }
+        return member;
+      });
+      setLocalMemberNames(filteredMembers);
       handleClose();
     }
   };
@@ -43,16 +49,7 @@ function Content({
     p: 4,
   };
 
-  const onHandleEditName = (name: string) => {
-    // console.log(name);
-    const filteredMembers: string[] = localMemberNames.map((member: string, index) => {
-      if (index === editIndex) {
-        return name;
-      }
-      return member;
-    });
-    setLocalMemberNames(filteredMembers);
-  };
+  const [editName, setEditName] = useState("");
 
   return (
     <Modal
@@ -67,11 +64,11 @@ function Content({
         </Typography>
 
         {/* Input */}
-        <TextField size="small" sx={{ marginTop: "1em" }} onChange={(e) => onHandleEditName(e.target.value)} />
+        <TextField data-testid="edit-member-input" placeholder="メンバー名を入力" size="small" sx={{ marginTop: "1em" }} onChange={(e) => setEditName(e.target.value)} />
 
         {/* 登録button */}
         <MyButton
-          data-testid="reg-button"
+          dataTestid="submit-edit-btn"
           onClick={handleClickRegButton}
           value="登録"
           variant="contained"
@@ -80,7 +77,7 @@ function Content({
 
         {/* キャンセルbutton */}
         <MyButton
-          data-testid="reg-button"
+          dataTestid="cancel-edit-btn"
           onClick={handleClose}
           value="キャンセル"
           variant="contained"

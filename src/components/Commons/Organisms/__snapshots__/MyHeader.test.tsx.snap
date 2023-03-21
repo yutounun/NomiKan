@@ -7,7 +7,7 @@ exports[`MyHeader takes a snapshot 1`] = `
     data-testid="header"
   >
     <h1
-      class="MuiTypography-root MuiTypography-h1 css-o2w69a-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h1 css-vh66nq-MuiTypography-root"
     />
   </div>
   <div

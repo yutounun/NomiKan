@@ -35,13 +35,13 @@ function Content({ onOpen }: Props) {
       gap="70px"
     >
       <CostTextField setLocalCost={setLocalCost} value={localCost} />
-      <a href="/add-members" style={{ textDecoration: "none", width: "100%" }}>
+      <a href="/add-members" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>
         <MyButton
           onClick={handleClickButton}
           disabled={localCost === ""}
           value="登録"
           variant="contained"
-          sx={{ borderRadius: "30px", width: "100%" }}
+          sx={{ borderRadius: "30px", width: { lg: "60%", xs: "80%" }, height: { lg: "3em", xs: "2em" } }}
         />
       </a>
     </Stack>

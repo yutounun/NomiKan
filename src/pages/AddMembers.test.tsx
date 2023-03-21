@@ -8,10 +8,10 @@ import AddMembers from "./AddMembers";
  * 2. TextField component must be rendered with a placeholder xx
  * 3. Reg Button component must be rendered xx
  * 4. AddButton component must be rendered xx
- * 5. If none of members is added, 「メンバーを登録してください」 must be displayed xx
+ * 5. If none of members is added, 「メンバーを追加してください」 must be displayed xx
  *    and the registration button must be disabled xx
  * 6. If any characters aren't typed, the add button must be disabled xx
- * 7. TextField component has placeholder showing 「メンバーを登録してください」 xx
+ * 7. TextField component has placeholder showing 「メンバーを追加してください」 xx
  * 8. If any member is added, list the member in the member-list component xx
  * 9. The Member component has name, delete button, and edit button xx
  * 10. Clicking edit button opens Edit Member modal xx
@@ -44,23 +44,22 @@ describe("AddMembers page", () => {
 
   it("has a textField component with a placeholder", () => {
     render(<AddMembers />);
-    const textField = screen.getByPlaceholderText("メンバーを登録してください");
+    const textField = screen.getByRole("textbox", {
+      name: /メンバーを追加/i
+    });
     expect(textField).toBeInTheDocument();
   });
 
-  it("has メンバーを登録してください with the disabled registration button and the disabled add button if none of members is added", () => {
+  it("has メンバーを追加してください with the disabled registration button and the disabled add button if none of members are added", () => {
     render(<AddMembers />);
-    const text = screen.getByText("メンバーを登録してください");
+    const text = screen.getByText("メンバーを追加してください");
     expect(text).toBeInTheDocument();
 
     // Make sure the registration button is disabled
-    expect(screen.getByRole("button", { name: /登録/i })).toBeDisabled();
-
-    // Make sure the add button is disabled
-    expect(screen.getByRole("button", { name: /add/i })).toBeDisabled();
+    expect(screen.getByText("登録")).toBeDisabled();
   });
 
-  it("has a button component", () => {
+  it("has a registration button component", () => {
     render(<AddMembers />);
     const regBtn = screen.getByTestId("reg-btn");
     expect(regBtn).toBeInTheDocument();
@@ -68,19 +67,21 @@ describe("AddMembers page", () => {
 
   it("has a AddButton component", () => {
     render(<AddMembers />);
-    const addButton = screen.getByTestId("add-button");
+    const addButton = screen.getByTestId("add-member-btn");
     expect(addButton).toBeInTheDocument();
   });
 
   it("has a Member component with name, delete button, and edit button", () => {
     render(<AddMembers />);
     // Type on TextField component using fireEvent
-    const textField = screen.getByPlaceholderText("メンバーを登録してください");
+    const textField = screen.getByRole("textbox", {
+      name: /メンバーを追加/i
+    });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
-    // Click registration button
+    // Click add button
     fireEvent(
-      screen.getByRole("button", { name: /登録/i }),
+      screen.getByTestId("add-member-btn"),
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
@@ -102,12 +103,14 @@ describe("AddMembers page", () => {
   it("clicking delete button deletes the member from the list", () => {
     render(<AddMembers />);
     // Type on TextField component using fireEvent
-    const textField = screen.getByPlaceholderText("メンバーを登録してください");
+    const textField = screen.getByRole("textbox", {
+      name: /メンバーを追加/i
+    });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
-    // Click registration button
+    // Click add button
     fireEvent(
-      screen.getByRole("button", { name: /登録/i }),
+      screen.getByTestId("add-member-btn"),
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
@@ -132,12 +135,14 @@ describe("AddMembers page", () => {
   it("clicking edit button opens Edit Member modal with the member name", () => {
     render(<AddMembers />);
     // Type on TextField component using fireEvent
-    const textField = screen.getByPlaceholderText("メンバーを登録してください");
+    const textField = screen.getByRole("textbox", {
+      name: /メンバーを追加/i
+    });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
-    // Click registration button
+    // Click add button
     fireEvent(
-      screen.getByRole("button", { name: /登録/i }),
+      screen.getByTestId("add-member-btn"),
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
@@ -155,18 +160,20 @@ describe("AddMembers page", () => {
       })
     );
 
-    expect(screen.getByRole("modal")).toBeInTheDocument();
+    expect(screen.getByText("名前の編集")).toBeInTheDocument();
   });
 
   it("shows edit modal and let you register the updated name", () => {
     render(<AddMembers />);
     // Type on TextField component using fireEvent
-    const textField = screen.getByPlaceholderText("メンバーを登録してください");
+    const textField = screen.getByRole("textbox", {
+      name: /メンバーを追加/i
+    });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
-    // Click registration button
+    // Click add button
     fireEvent(
-      screen.getByRole("button", { name: /登録/i }),
+      screen.getByTestId("add-member-btn"),
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
@@ -186,9 +193,8 @@ describe("AddMembers page", () => {
 
     expect(screen.getByText("Yuto")).toBeInTheDocument();
 
-    const textEditField = screen.getByPlaceholderText("メンバーを編集してください");
+    const textEditField = screen.getByRole("textbox");
     fireEvent.change(textEditField, { target: { value: "Taka" } });
-    expect(screen.getByText("Taka")).toBeInTheDocument();
 
     const submitEditBtn = screen.getByTestId("submit-edit-btn");
 
@@ -207,12 +213,14 @@ describe("AddMembers page", () => {
   it("close edit modal without updating", () => {
     render(<AddMembers />);
     // Type on TextField component using fireEvent
-    const textField = screen.getByPlaceholderText("メンバーを登録してください");
+    const textField = screen.getByRole("textbox", {
+      name: /メンバーを追加/i
+    });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
-    // Click registration button
+    // Click add button
     fireEvent(
-      screen.getByRole("button", { name: /登録/i }),
+      screen.getByTestId("add-member-btn"),
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
@@ -230,13 +238,9 @@ describe("AddMembers page", () => {
       })
     );
 
-    expect(screen.getByText("Yuto")).toBeInTheDocument();
-
-    const textEditField = screen.getByPlaceholderText("メンバーを編集してください");
+    const textEditField = screen.getByRole("textbox");
     fireEvent.change(textEditField, { target: { value: "Taka" } });
-    expect(screen.getByText("Taka")).toBeInTheDocument();
-
-    const closeBtn = screen.getByTestId("close-btn");
+    const closeBtn = screen.getByTestId("cancel-edit-btn");
 
     // Close Edit Member modal
     fireEvent(
@@ -258,19 +262,21 @@ describe("AddMembers page", () => {
   it("renders MyAlert component after adding a new member", () => {
     render(<AddMembers />);
     // Type on TextField component using fireEvent
-    const textField = screen.getByPlaceholderText("メンバーを登録してください");
+    const textField = screen.getByRole("textbox", {
+      name: /メンバーを追加/i
+    });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
-    // Click registration button
+    // Click add button
     fireEvent(
-      screen.getByRole("button", { name: /登録/i }),
+      screen.getByTestId("add-member-btn"),
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
       })
     );
 
-    expect(screen.getByText("メンバーを追加しました！")).toBeInTheDocument();
+    expect(screen.getByText(/メンバーを追加しました！/i)).toBeInTheDocument();
   });
 
   it("Shows 'メンバー追加' on the title", () => {

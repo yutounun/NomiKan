@@ -18,7 +18,7 @@ export const useNomikanStore = create<State & Action>()(
   // Store cost data in session storage
   persist(
     (set) => ({
-      cost: 0,
+      cost: "",
       members: [],
 
       setCost: (newCost: number | string | undefined) =>

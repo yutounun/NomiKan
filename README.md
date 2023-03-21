@@ -1,5 +1,11 @@
 # Getting Started with Us
 
+
+
+https://user-images.githubusercontent.com/96335290/226178772-cc6e98ba-d23d-4895-9f1e-02363ce8855b.mov
+
+
+
 [DEV_ENV](https://spectacular-boba-b2aad2.netlify.app/)
 
 This is the App to help the organizer at drinking party to know how much others have to pay.

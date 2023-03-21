@@ -35,7 +35,7 @@ function Content({ onOpen }: Props) {
       gap="70px"
     >
       <CostTextField setLocalCost={setLocalCost} value={localCost} />
-      <a href="/add-members" style={{ textDecoration: "none", width: "100%", , textAlign: "center" }}>
+      <a href="/add-members" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>
         <MyButton
           onClick={handleClickButton}
           disabled={localCost === ""}

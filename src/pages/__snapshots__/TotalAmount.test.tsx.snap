@@ -13,7 +13,7 @@ exports[`TotalAmount takes a snapshot 1`] = `
         data-testid="header"
       >
         <h1
-          class="MuiTypography-root MuiTypography-h1 css-o2w69a-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h1 css-vh66nq-MuiTypography-root"
         >
           合計金額
         </h1>
@@ -255,7 +255,7 @@ exports[`TotalAmount takes a snapshot 1`] = `
         class="MuiStack-root css-1im4rj0-MuiStack-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-e9kz5q-MuiFormControl-root-MuiTextField-root"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
@@ -291,10 +291,10 @@ exports[`TotalAmount takes a snapshot 1`] = `
         </div>
         <a
           href="/add-members"
-          style="text-decoration: none; width: 100%;"
+          style="text-decoration: none; width: 100%; text-align: center;"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-16woavu-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1utqvyv-MuiButtonBase-root-MuiButton-root"
             disabled=""
             tabindex="-1"
             type="button"

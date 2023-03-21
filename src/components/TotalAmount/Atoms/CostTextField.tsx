@@ -15,6 +15,12 @@ function CostTextField({ setLocalCost, value }: Props) {
       type="number"
       variant="outlined"
       onChange={(e) => setLocalCost(e.target.value)}
+      sx={{
+        width: {
+          lg: "40em",
+          xs: "200px",
+        },
+      }}
     />
   );
 }

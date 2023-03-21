@@ -28,16 +28,16 @@ function Buttons() {
     },
   ];
   return (
-    <Stack direction="column" gap={2} pt={3} justifyContent="center">
+    <Stack direction="column" gap={2} pt={3} justifyContent="center" width="100%">
       {buttons.map((button) => (
-        <Link key={button.label} to={button.to} style={{ textDecoration: "none" }}>
+        <Link key={button.label} to={button.to} style={{ textDecoration: "none", textAlign: "center" }}>
           <MyButton
             startIcon={button.icon}
             variant="outlined"
             value={button.label}
             color="primary"
             size="large"
-            sx={{ borderRadius: "10px", width: "200px" }}
+            sx={{ borderRadius: "10px", width: { xs: "60%", lg: "80%" } }}
           />
         </Link>
       ))}

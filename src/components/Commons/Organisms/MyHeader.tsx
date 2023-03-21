@@ -24,7 +24,7 @@ function MyHeader({ value, hideGoBack }: Props) {
           top: 0,
         }}
       >
-        <Typography variant="h1">{value}</Typography>
+        <Typography variant="h1" sx={{ fontSize: { lg: "28px", xs: "16px" } }}>{value}</Typography>
       </Stack>
 
       {/* In case go back btn isn't hidden */}

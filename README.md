@@ -67,6 +67,7 @@ It should take a while for the first time, but it'll be shorter from second time
 - [x] TDD
 - [ ] Codeium
 - [ ] SCSS
+- [ ] Responsive for PC and mobile
 
 ## Must-read articles
 

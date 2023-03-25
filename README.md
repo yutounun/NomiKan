@@ -54,20 +54,19 @@ It should take a while for the first time, but it'll be shorter from second time
 - [x] React
 - [x] Testing Library
 - [x] CI
-- [ ] CD
-- [ ] Figma
-- [ ] Copilot
+- [x] CD
+- [x] Figma
 - [ ] StopLight
 - [x] StoryBook
-- [ ] MUI
-- [ ] Atomic Design
+- [x] MUI
+- [x] Atomic Design
 - [ ] PWA
-- [ ] Netlify
-- [ ] Strict TypeScript
+- [x] Netlify
+- [x] Strict TypeScript
 - [x] TDD
-- [ ] Codeium
-- [ ] SCSS
-- [ ] Responsive for PC and mobile
+- [x] Codeium
+- [x] SCSS
+- [x] Responsive for PC and mobile
 
 ## Must-read articles
 

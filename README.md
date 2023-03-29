@@ -51,6 +51,7 @@ It should take a while for the first time, but it'll be shorter from second time
 
 - [x] devcontainer
 - [ ] supabase
+- [ ] Python with FastAPI
 - [x] React
 - [x] Testing Library
 - [x] CI

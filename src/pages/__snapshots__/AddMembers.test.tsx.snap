@@ -315,7 +315,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
         </div>
         <a
           data-testid="reg-btn"
-          href="/add-members"
+          href="/input-percentage"
           style="text-decoration: none; width: 100%; text-align: center;"
         >
           <button

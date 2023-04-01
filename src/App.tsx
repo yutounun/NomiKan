@@ -8,6 +8,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Top from "pages/Top";
 import TotalAmount from "pages/TotalAmount";
 import AddMembers from "pages/AddMembers";
+import InputPercentage from "pages/InputPercentage";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ function App() {
     {
       path: "/add-members",
       element: <AddMembers />,
+    },
+    {
+      path: "/input-percentage",
+      element: <InputPercentage />,
     },
   ]);
 

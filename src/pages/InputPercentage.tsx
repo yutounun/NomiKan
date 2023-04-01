@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Stack } from "@mui/material";
 
 import BaseLayout from "components/Commons/Layout/BaseLayout";
 import MyHeader from "components/Commons/Organisms/MyHeader";
 import MyStepper from "components/Commons/Organisms/MyStepper";
-// import Content from "components/AddMembers/Organisms/Content";
+import Content from "components/InputPercentage/Organisms/Content";
 
 // import MyAlert from "components/Commons/Molecules/MyAlert";
 
 function AddMembers() {
-  // const [open, setOpen] = useState(false);
-  // // const [alertLabel, setAlertLabel] = useState("");
+  const [open, setOpen] = useState(false);
+  const [alertLabel, setAlertLabel] = useState("");
+
+  console.log(alertLabel, open);
 
   // const handleCloseAlert = () => {
   //   setOpen(false);
@@ -26,7 +28,7 @@ function AddMembers() {
         <MyStepper activeStep={2} />
 
         {/* Content including input and button */}
-        {/* <Content setOpen={setOpen} setAlertLabel={setAlertLabel} /> */}
+        <Content setOpen={setOpen} setAlertLabel={setAlertLabel} />
 
         {/* Alert for the completion of registration  */}
         {/* <MyAlert parentOpen={open} value={alertLabel} onClose={handleCloseAlert} /> */}

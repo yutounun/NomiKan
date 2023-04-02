@@ -4,14 +4,20 @@ import { create } from "zustand";
 import { mountStoreDevtool } from "simple-zustand-devtools";
 import { persist, createJSONStorage } from "zustand/middleware";
 
+interface IMember {
+  name: string
+  ratio: number
+}
 interface State {
+  // total cost of all members
   cost: number | string | undefined;
-  members: Array<string>;
+  // list of members info
+  members: IMember[]
 }
 
 interface Action {
   setCost: (newCost: number | string | undefined) => void;
-  setMembers: (newMembers: Array<string>) => void;
+  setMembers: (newMembers: Array<IMember>) => void;
 }
 
 export const useNomikanStore = create<State & Action>()(
@@ -23,7 +29,7 @@ export const useNomikanStore = create<State & Action>()(
 
       setCost: (newCost: number | string | undefined) =>
         set(() => ({ cost: newCost })),
-      setMembers: (newMembers: Array<string>) =>
+      setMembers: (newMembers: Array<IMember>) =>
         set(() => ({ members: newMembers })),
     }),
     {

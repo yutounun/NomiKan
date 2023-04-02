@@ -8,11 +8,9 @@ import Content from "components/InputPercentage/Organisms/Content";
 
 // import MyAlert from "components/Commons/Molecules/MyAlert";
 
-function AddMembers() {
-  const [open, setOpen] = useState(false);
-  const [alertLabel, setAlertLabel] = useState("");
-
-  console.log(alertLabel, open);
+function InputPercentage() {
+  const [, setOpen] = useState(false);
+  const [, setAlertLabel] = useState("");
 
   // const handleCloseAlert = () => {
   //   setOpen(false);
@@ -38,4 +36,4 @@ function AddMembers() {
   );
 }
 
-export default AddMembers;
+export default InputPercentage;

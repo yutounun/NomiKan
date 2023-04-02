@@ -242,7 +242,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
         </div>
       </div>
       <div
-        class="MuiStack-root css-4pvov-MuiStack-root"
+        class="MuiStack-root css-1qvmp2n-MuiStack-root"
       >
         <div
           class="MuiStack-root css-7owdng-MuiStack-root"
@@ -305,7 +305,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
           </button>
         </div>
         <div
-          class="MuiStack-root css-1fcghb4-MuiStack-root"
+          class="MuiStack-root css-mzgixp-MuiStack-root"
         >
           <p
             class="MuiTypography-root MuiTypography-body1 css-1wn5ih4-MuiTypography-root"
@@ -313,35 +313,29 @@ exports[`AddMembers page takes a snapshot 1`] = `
             メンバーを追加してください
           </p>
         </div>
-        <a
-          data-testid="reg-btn"
-          href="/input-percentage"
-          style="text-decoration: none; width: 100%; text-align: center;"
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1ujftte-MuiButtonBase-root-MuiButton-root"
+          disabled=""
+          tabindex="-1"
+          type="button"
         >
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-ei57pa-MuiButtonBase-root-MuiButton-root"
-            disabled=""
-            tabindex="-1"
-            type="button"
+          <span
+            class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
           >
-            <span
-              class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DoneOutlineIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="DoneOutlineIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m19.77 5.03 1.4 1.4L8.43 19.17l-5.6-5.6 1.4-1.4 4.2 4.2L19.77 5.03m0-2.83L8.43 13.54l-4.2-4.2L0 13.57 8.43 22 24 6.43 19.77 2.2z"
-                />
-              </svg>
-            </span>
-            登録
-          </button>
-        </a>
+              <path
+                d="m19.77 5.03 1.4 1.4L8.43 19.17l-5.6-5.6 1.4-1.4 4.2 4.2L19.77 5.03m0-2.83L8.43 13.54l-4.2-4.2L0 13.57 8.43 22 24 6.43 19.77 2.2z"
+              />
+            </svg>
+          </span>
+          登録
+        </button>
       </div>
     </div>
   </main>

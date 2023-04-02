@@ -289,19 +289,14 @@ exports[`TotalAmount takes a snapshot 1`] = `
             </fieldset>
           </div>
         </div>
-        <a
-          href="/add-members"
-          style="text-decoration: none; width: 100%; text-align: center;"
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1dcvikp-MuiButtonBase-root-MuiButton-root"
+          disabled=""
+          tabindex="-1"
+          type="button"
         >
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1utqvyv-MuiButtonBase-root-MuiButton-root"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            登録
-          </button>
-        </a>
+          登録
+        </button>
       </div>
     </div>
   </main>

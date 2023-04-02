@@ -57,6 +57,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
   return (
     <Stack
       direction="column"
+      alignItems="center"
       mt={10}
       width="100%"
       gap="2em"
@@ -70,16 +71,14 @@ function Content({ setOpen, setAlertLabel }: Props) {
       />
 
       {/* 「登録」Button */}
-      <a href="/result" data-testid="reg-btn" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>
-        <MyButton
-          startIcon={<DoneOutlineIcon />}
-          onClick={handleClickRegButton}
-          value="登録"
-          disabled={!showsRegBtn()}
-          variant="contained"
-          sx={{ borderRadius: "30px", width: { xs: "80%", md: "50%" }, height: { md: "3em" } }}
-        />
-      </a>
+      <MyButton
+        startIcon={<DoneOutlineIcon />}
+        onClick={handleClickRegButton}
+        value="登録"
+        disabled={!showsRegBtn()}
+        variant="contained"
+        sx={{ borderRadius: "30px", width: { lg: "60%", xs: "60%" }, height: { md: "3em" } }}
+      />
 
       <EditModal
         editIndex={editIndex}

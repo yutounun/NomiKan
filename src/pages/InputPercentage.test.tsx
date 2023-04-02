@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import InputPercentage from "pages/InputPercentage";
 
 /**
@@ -18,16 +19,28 @@ import InputPercentage from "pages/InputPercentage";
 
 describe("InputPercentage page", () => {
   it("renders correctly", () => {
-    render(<InputPercentage />);
+    render(
+      <Router>
+        <InputPercentage />
+      </Router>
+    );
   });
 
   it("takes a snapshot", () => {
-    const { asFragment } = render(<InputPercentage />);
+    const { asFragment } = render(
+      <Router>
+        <InputPercentage />
+      </Router>
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("Shows 割合入力 on the title", () => {
-    render(<InputPercentage />);
+    render(
+      <Router>
+        <InputPercentage />
+      </Router>
+    );
 
     const header = screen.getByRole("heading", {
       name: /割合入力/i,
@@ -37,7 +50,11 @@ describe("InputPercentage page", () => {
   });
 
   it("Renders MyStepper component with the current step", () => {
-    render(<InputPercentage />);
+    render(
+      <Router>
+        <InputPercentage />
+      </Router>
+    );
     const totalAmountStep = screen.getByTestId("合計金額");
     // Only inactive steps have "Mui-disabled" class
     expect(totalAmountStep).not.toHaveClass("Mui-disabled");
@@ -50,7 +67,11 @@ describe("InputPercentage page", () => {
   });
 
   //   it("Renders add button component", () => {
-  //     render(<InputPercentage />);
+  //     render(
+  //   <Router>
+  //     <InputPercentage />
+  //   </Router>
+  // );
   //     const textField = screen.getByRole("button", {
   //       name: /登録/i
   //     });
@@ -58,14 +79,22 @@ describe("InputPercentage page", () => {
   //   });
 
   //   it("Disable the registration button initially", () => {
-  //     render(<InputPercentage />);
+  //     render(
+  // <Router>
+  //   <InputPercentage />
+  // </Router>
+  // );
 
   //     // Make sure the registration button is disabled
   //     expect(screen.getByText("登録")).toBeDisabled();
   //   });
 
   // it("has a registration button component", () => {
-  //   render(<InputPercentage />);
+  //   render(
+  //   <Router>
+  //     <InputPercentage />
+  //   </Router>
+  // );
   //   const regBtn = screen.getByTestId("reg-btn");
   //   expect(regBtn).toBeInTheDocument();
   // });
@@ -76,7 +105,11 @@ describe("InputPercentage page", () => {
   // );
 
   // screen.debug(undefined, Infinity);
-  // render(<InputPercentage />);
+  // render(
+  //   <Router>
+  //     <InputPercentage />
+  //   </Router>
+  // );
   // const memberName = screen.getByText("Yuto");
   // expect(memberName).toBeInTheDocument();
   // });
@@ -85,7 +118,11 @@ describe("InputPercentage page", () => {
   //   sessionStorage.setItem(
   //     "nomikan-storage", '{"state":{"cost":"","members":["Yuto"]},"version":0}'
   //   );
-  //   render(<InputPercentage />);
+  //   render(
+  //   <Router>
+  //     <InputPercentage />
+  //   </Router>
+  // );
 
   //   // Click add button
   //   fireEvent(
@@ -104,7 +141,11 @@ describe("InputPercentage page", () => {
   //   sessionStorage.setItem(
   // "nomikan-storage", '{"state":{"cost":"","members":["Yuto"]},"version":0}'
   // );
-  //   render(<InputPercentage />);
+  //   render(
+  //   <Router>
+  //     <InputPercentage />
+  //   </Router>
+  // );
 
   //   // Click add button
   //   fireEvent(

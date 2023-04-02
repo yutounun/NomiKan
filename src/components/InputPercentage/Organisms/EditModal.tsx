@@ -1,38 +1,34 @@
 import { Modal, Stack, TextField, Typography } from "@mui/material";
 import MyButton from "components/Commons/Atoms/MyButton";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 
 class Props {
   setOpenModal!: (value: boolean) => void;
+
+  closeModal!: (value: number) => void;
 
   openModal!: boolean;
 
   editIndex!: number;
 
-  setLocalMemberNames!: (value: string[]) => void;
+  localRatios!: number[];
 
-  localMemberNames!: string[];
+  setLocalRatios!: Dispatch<SetStateAction<number[]>>;
 }
 
 function Content({
-  openModal, setOpenModal, editIndex, setLocalMemberNames, localMemberNames
+  openModal, setOpenModal, editIndex, localRatios, setLocalRatios, closeModal
 }: Props) {
   const handleClose = () => {
     setOpenModal(false);
   };
 
+  const [ratio, setRatio] = useState(0);
+
   const handleClickRegButton = () => {
-    if (localMemberNames) {
-      // set input cost on Session storage
-      const filteredMembers: string[] = localMemberNames.map((member: string, index) => {
-        if (index === editIndex) {
-          return editName;
-        }
-        return member;
-      });
-      setLocalMemberNames(filteredMembers);
-      handleClose();
-    }
+    setLocalRatios([...localRatios, ratio]);
+    handleClose();
+    closeModal(ratio);
   };
 
   // style for the modal
@@ -49,8 +45,6 @@ function Content({
     p: 4,
   };
 
-  const [editName, setEditName] = useState("");
-
   return (
     <Modal
       open={openModal}
@@ -59,12 +53,15 @@ function Content({
     >
       <Stack flexDirection="column" justifyContent="center" alignItems="center" sx={style}>
         {/* title */}
-        <Typography id="modal-modal-title" variant="h6">
+        <Typography id="modal-modal-title" variant="h6" mb={2}>
           編集
         </Typography>
 
         {/* Input */}
-        <TextField data-testid="edit-member-input" placeholder="割合を入力" size="small" sx={{ marginTop: "1em" }} onChange={(e) => setEditName(e.target.value)} />
+        <Stack direction="row" alignItems="center">
+          <TextField data-testid="edit-member-input" placeholder="割合を入力" size="small" onBlur={(e) => setRatio(Number(e.target.value))} />
+          <Typography ml={2}>%</Typography>
+        </Stack>
 
         {/* 登録button */}
         <MyButton

@@ -9,6 +9,10 @@ import { useNomikanStore } from "stores/nomikan";
 import MembersList from "components/AddMembers/Organisms/MembersList";
 import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 
+interface IMember {
+  name: string;
+  ratio: number;
+}
 class Props {
   setOpen!: (value: boolean) => void;
 
@@ -19,7 +23,8 @@ function Content({ setOpen, setAlertLabel }: Props) {
   const [openModal, setOpenModal] = useState(false);
   const [editIndex, setEditIndex] = useState(0);
   const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
-  const [localMemberNames, setLocalMemberNames] = useState<string[]>(members);
+  const membersNames = () => members.map((member: IMember) => member.name);
+  const [localMemberNames, setLocalMemberNames] = useState<string[]>(membersNames);
 
   /** Set members on the list and open the alert */
   const handleSetLocalMemberNames = (newName: string) => {
@@ -40,14 +45,30 @@ function Content({ setOpen, setAlertLabel }: Props) {
       setOpen(true);
       setAlertLabel("メンバーを追加しました！");
       setLocalMemberNames((prevArray) => [...prevArray, newName]);
-      setMembers(localMemberNames);
+      const rtn = localMemberNames.map((name) => {
+        const ans = {
+          name,
+          ratio: 0
+        };
+        return ans;
+      });
+
+      setMembers(rtn);
     }
   };
 
   /** save members to Zustand store */
   const handleClickRegButton = () => {
     // set input cost on Session storage
-    setMembers(localMemberNames);
+    const rtn = localMemberNames.map((name) => {
+      const ans = {
+        name,
+        ratio: 0
+      };
+      return ans;
+    });
+
+    setMembers(rtn);
   };
 
   // remove the member from the list

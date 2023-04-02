@@ -14,21 +14,59 @@ class Props {
   setAlertLabel!: (value: string) => void;
 }
 
+interface IMember {
+  name: string;
+  ratio: number;
+}
+
 function Content({ setOpen, setAlertLabel }: Props) {
   const [openModal, setOpenModal] = useState(false);
   const [editIndex, setEditIndex] = useState(0);
   const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
-  const [localMemberNames, setLocalMemberNames] = useState<string[]>(members);
+  const membersNames = () => members.map((member: IMember) => member.name);
+  const [localMemberNames] = useState<string[]>(membersNames);
+  const [localMemberInfo, setLocalMemberInfo] = useState<IMember[]>([]);
+  const [localRatios, setLocalRatios] = useState<number[]>([]);
 
-  /** save members to Zustand store */
+  const memberInfo = () => {
+    const rtn = [];
+    for (let i = 0; i < localMemberNames.length; i++) {
+      rtn.push({
+        name: localMemberNames[i],
+        ratio: localRatios[i]
+      });
+    }
+    return rtn;
+  };
+
+  /** save member information on store and navigate to result page */
   const handleClickRegButton = () => {
-    // set input cost on Session storage
-    setMembers(localMemberNames);
+    // TODO: navigate to result page
+    setMembers(localMemberInfo);
   };
 
   const onHandleEdit = (index: number) => {
     setEditIndex(index);
     setOpenModal(true);
+  };
+
+  const closeModal = (ratios: number) => {
+    const rtn = members.map((member: IMember, index) => {
+      // change the edited ratio value on the modal
+      if (index === editIndex) {
+        // eslint-disable-next-line no-param-reassign
+        member.ratio = ratios;
+      }
+      return member;
+    });
+    setLocalMemberInfo(rtn);
+  };
+
+  // check if sum of all ratios is 100
+  const showsRegBtn = () => {
+    const sum = localRatios.reduce((a, b) => a + b, 0);
+    console.log("🚀 ~ file: Content.tsx:68 ~ showsRegBtn ~ sum:", sum);
+    return sum === 100;
   };
 
   return (
@@ -42,7 +80,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
 
       {/* members */}
       <MembersList
-        localMemberNames={localMemberNames}
+        memberInfo={memberInfo()}
         onHandleEdit={onHandleEdit}
       />
 
@@ -51,8 +89,8 @@ function Content({ setOpen, setAlertLabel }: Props) {
         <MyButton
           startIcon={<DoneOutlineIcon />}
           onClick={handleClickRegButton}
-          disabled={localMemberNames.length === 0}
           value="登録"
+          disabled={!showsRegBtn()}
           variant="contained"
           sx={{ borderRadius: "30px", width: { xs: "80%", md: "50%" }, height: { md: "3em" } }}
         />
@@ -62,8 +100,9 @@ function Content({ setOpen, setAlertLabel }: Props) {
         editIndex={editIndex}
         openModal={openModal}
         setOpenModal={setOpenModal}
-        localMemberNames={localMemberNames}
-        setLocalMemberNames={setLocalMemberNames}
+        closeModal={closeModal}
+        localRatios={localRatios}
+        setLocalRatios={setLocalRatios}
       />
     </Stack>
 

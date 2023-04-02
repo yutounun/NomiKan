@@ -13,7 +13,7 @@ class Props {
 
 function MembersList({ localMemberNames, onHandleEdit, removeMember } : Props) {
   return (
-    <Stack justifyContent="left">
+    <Stack justifyContent="left" width="100%">
       {localMemberNames && localMemberNames.length > 0
         ? localMemberNames.map((memberName, index) => (
           <Stack flexDirection="row" mb={2} key={memberName}>

@@ -14,7 +14,7 @@ class Props {
 
 function MembersList({ onHandleEdit, memberInfo } : Props) {
   return (
-    <Stack justifyContent="left">
+    <Stack justifyContent="left" width="100%">
       {memberInfo.map((m, index) => (
         <Stack flexDirection="row" mb={2} key={m.name}>
           <Typography sx={{ width: { lg: "90%", xs: "70%" } }}>{m.name}</Typography>

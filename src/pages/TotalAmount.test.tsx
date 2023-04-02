@@ -1,5 +1,6 @@
 import { fireEvent, render, screen, cleanup } from "@testing-library/react";
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import TotalAmount from "./TotalAmount";
 
 /**
@@ -18,21 +19,37 @@ describe("TotalAmount", () => {
   afterEach(() => cleanup());
 
   it("doesn't allow user to click Button when Input is empty", () => {
-    render(<TotalAmount />);
+    render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
     expect(screen.getByRole("button", { name: /登録/i })).toBeDisabled();
   });
 
   it("renders correctly", () => {
-    render(<TotalAmount />);
+    render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
   });
 
   it("takes a snapshot", () => {
-    const { asFragment } = render(<TotalAmount />);
+    const { asFragment } = render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders all steps in the Stepper component", () => {
-    render(<TotalAmount />);
+    render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
     expect(screen.getByTestId("合計金額")).toBeInTheDocument();
     expect(screen.getByTestId("メンバー追加")).toBeInTheDocument();
     expect(screen.getByTestId("割合入力")).toBeInTheDocument();
@@ -40,18 +57,30 @@ describe("TotalAmount", () => {
   });
 
   it("renders an Input component with a placeholder", () => {
-    render(<TotalAmount />);
+    render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
     const inputElem = screen.getByLabelText("金額を入力してね");
     expect(inputElem).toBeInTheDocument();
   });
 
   it("does not render alert at first", () => {
-    render(<TotalAmount />);
+    render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
     expect(screen.queryByRole("alert")).toBeFalsy();
   });
 
   it("renders an Alert component after registration", () => {
-    render(<TotalAmount />);
+    render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
 
     // Type cost in the textbox field
     fireEvent.change(
@@ -74,7 +103,11 @@ describe("TotalAmount", () => {
   });
 
   it("renders a Button component", () => {
-    render(<TotalAmount />);
+    render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
     const buttonElem = screen.getByRole("spinbutton", {
       name: /金額を入力してね/i,
     });
@@ -82,7 +115,11 @@ describe("TotalAmount", () => {
   });
 
   it("sets the Active step on Stepper to be 0", () => {
-    render(<TotalAmount />);
+    render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
     const stepperElem = screen.getByTestId("合計金額");
 
     // Only inactive steps have "Mui-disabled" class
@@ -90,7 +127,11 @@ describe("TotalAmount", () => {
   });
 
   it("saves cost on session storage when Button is clicked", () => {
-    render(<TotalAmount />);
+    render(
+      <Router>
+        <TotalAmount />
+      </Router>
+    );
 
     // Type cost in the textbox field
     fireEvent.change(

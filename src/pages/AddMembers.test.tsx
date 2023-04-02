@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import AddMembers from "./AddMembers";
 
 /**
@@ -24,16 +25,16 @@ import AddMembers from "./AddMembers";
 
 describe("AddMembers page", () => {
   it("renders correctly", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
   });
 
   it("takes a snapshot", () => {
-    const { asFragment } = render(<AddMembers />);
+    const { asFragment } = render(<Router><AddMembers /></Router>);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("has myStepper component with the current step", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     const AddMembersStep = screen.getByTestId("合計金額");
     // Only inactive steps have "Mui-disabled" class
     expect(AddMembersStep).not.toHaveClass("Mui-disabled");
@@ -43,7 +44,7 @@ describe("AddMembers page", () => {
   });
 
   it("has a textField component with a placeholder", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     const textField = screen.getByRole("textbox", {
       name: /メンバーを追加/i
     });
@@ -51,7 +52,7 @@ describe("AddMembers page", () => {
   });
 
   it("has メンバーを追加してください with the disabled registration button and the disabled add button if none of members are added", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     const text = screen.getByText("メンバーを追加してください");
     expect(text).toBeInTheDocument();
 
@@ -60,19 +61,21 @@ describe("AddMembers page", () => {
   });
 
   it("has a registration button component", () => {
-    render(<AddMembers />);
-    const regBtn = screen.getByTestId("reg-btn");
+    render(<Router><AddMembers /></Router>);
+    const regBtn = screen.getByRole("button", {
+      name: /登録/i
+    });
     expect(regBtn).toBeInTheDocument();
   });
 
   it("has a AddButton component", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     const addButton = screen.getByTestId("add-member-btn");
     expect(addButton).toBeInTheDocument();
   });
 
   it("has a Member component with name, delete button, and edit button", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
       name: /メンバーを追加/i
@@ -101,7 +104,7 @@ describe("AddMembers page", () => {
   });
 
   it("clicking delete button deletes the member from the list", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
       name: /メンバーを追加/i
@@ -133,7 +136,7 @@ describe("AddMembers page", () => {
   });
 
   it("clicking edit button opens Edit Member modal with the member name", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
       name: /メンバーを追加/i
@@ -164,7 +167,7 @@ describe("AddMembers page", () => {
   });
 
   it("shows edit modal and let you register the updated name", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
       name: /メンバーを追加/i
@@ -211,7 +214,7 @@ describe("AddMembers page", () => {
   });
 
   it("close edit modal without updating", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
       name: /メンバーを追加/i
@@ -255,12 +258,12 @@ describe("AddMembers page", () => {
   });
 
   it("does not render alert at first", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     expect(screen.queryByRole("alert")).toBeFalsy();
   });
 
   it("renders MyAlert component after adding a new member", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
       name: /メンバーを追加/i
@@ -280,7 +283,7 @@ describe("AddMembers page", () => {
   });
 
   it("Shows 'メンバー追加' on the title", () => {
-    render(<AddMembers />);
+    render(<Router><AddMembers /></Router>);
     const header = screen.getByRole("heading", {
       name: /メンバー追加/i,
     });

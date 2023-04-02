@@ -1,8 +1,7 @@
 import { Stack } from "@mui/material";
 import MyButton from "components/Commons/Atoms/MyButton";
 import React, { useState } from "react";
-// TODO: use Link instead of <a>
-// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useNomikanStore } from "stores/nomikan";
 import CostTextField from "../Atoms/CostTextField";
 
@@ -11,6 +10,7 @@ class Props {
 }
 
 function Content({ onOpen }: Props) {
+  const navigate = useNavigate();
   const [cost, setCost] = useNomikanStore((state) => [state.cost, state.setCost]);
   const [localCost, setLocalCost] = useState<number | string | undefined>(cost);
 
@@ -24,6 +24,8 @@ function Content({ onOpen }: Props) {
 
     // clear input cost
     setLocalCost("");
+
+    navigate("/add-members");
   };
 
   return (
@@ -35,15 +37,13 @@ function Content({ onOpen }: Props) {
       gap="70px"
     >
       <CostTextField setLocalCost={setLocalCost} value={localCost} />
-      <a href="/add-members" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>
-        <MyButton
-          onClick={handleClickButton}
-          disabled={localCost === ""}
-          value="登録"
-          variant="contained"
-          sx={{ borderRadius: "30px", width: { lg: "60%", xs: "80%" }, height: { lg: "3em", xs: "2em" } }}
-        />
-      </a>
+      <MyButton
+        onClick={handleClickButton}
+        disabled={localCost === ""}
+        value="登録"
+        variant="contained"
+        sx={{ borderRadius: "30px", width: { lg: "60%", xs: "80%" }, height: { md: "3em" } }}
+      />
     </Stack>
   );
 }

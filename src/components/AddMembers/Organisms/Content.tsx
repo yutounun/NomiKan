@@ -4,7 +4,7 @@ import MemberInput from "components/AddMembers/Molecules/MemberInput";
 import EditModal from "components/AddMembers/Organisms/EditModal";
 import MyButton from "components/Commons/Atoms/MyButton";
 // TODO: use Link instead of <a>
-// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useNomikanStore } from "stores/nomikan";
 import MembersList from "components/AddMembers/Organisms/MembersList";
 import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
@@ -20,6 +20,8 @@ class Props {
 }
 
 function Content({ setOpen, setAlertLabel }: Props) {
+  const navigate = useNavigate();
+
   const [openModal, setOpenModal] = useState(false);
   const [editIndex, setEditIndex] = useState(0);
   const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
@@ -65,6 +67,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
         name,
         ratio: 0
       };
+      navigate("/input-percentage");
       return ans;
     });
 
@@ -89,7 +92,9 @@ function Content({ setOpen, setAlertLabel }: Props) {
   return (
     <Stack
       direction="column"
+      alignItems="center"
       mt={10}
+      width="100%"
       gap="2em"
       sx={{ maxWidth: "80%" }}
     >
@@ -104,16 +109,15 @@ function Content({ setOpen, setAlertLabel }: Props) {
       />
 
       {/* 「登録」Button */}
-      <a href="/input-percentage" data-testid="reg-btn" style={{ textDecoration: "none", width: "100%", textAlign: "center" }}>
-        <MyButton
-          startIcon={<DoneOutlineIcon />}
-          onClick={handleClickRegButton}
-          disabled={localMemberNames.length === 0}
-          value="登録"
-          variant="contained"
-          sx={{ borderRadius: "30px", width: { xs: "80%", md: "50%" }, height: { md: "3em" } }}
-        />
-      </a>
+      <MyButton
+        data-testid="reg-btn"
+        startIcon={<DoneOutlineIcon />}
+        onClick={handleClickRegButton}
+        disabled={localMemberNames.length === 0}
+        value="登録"
+        variant="contained"
+        sx={{ borderRadius: "30px", width: { lg: "60%", xs: "60%" }, height: { md: "3em" } }}
+      />
 
       <EditModal
         editIndex={editIndex}

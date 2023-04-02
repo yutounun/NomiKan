@@ -23,21 +23,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
   const [openModal, setOpenModal] = useState(false);
   const [editIndex, setEditIndex] = useState(0);
   const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
-  const membersNames = () => members.map((member: IMember) => member.name);
-  const [localMemberNames] = useState<string[]>(membersNames);
-  const [localMemberInfo, setLocalMemberInfo] = useState<IMember[]>([]);
-  const [localRatios, setLocalRatios] = useState<number[]>([]);
-
-  const memberInfo = () => {
-    const rtn = [];
-    for (let i = 0; i < localMemberNames.length; i++) {
-      rtn.push({
-        name: localMemberNames[i],
-        ratio: localRatios[i]
-      });
-    }
-    return rtn;
-  };
+  const [localMemberInfo, setLocalMemberInfo] = useState<IMember[]>(members);
 
   /** save member information on store and navigate to result page */
   const handleClickRegButton = () => {
@@ -64,8 +50,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
 
   // check if sum of all ratios is 100
   const showsRegBtn = () => {
-    const sum = localRatios.reduce((a, b) => a + b, 0);
-    console.log("🚀 ~ file: Content.tsx:68 ~ showsRegBtn ~ sum:", sum);
+    const sum = localMemberInfo.reduce((sums, member) => sums + member.ratio, 0);
     return sum === 100;
   };
 
@@ -80,7 +65,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
 
       {/* members */}
       <MembersList
-        memberInfo={memberInfo()}
+        memberInfo={localMemberInfo}
         onHandleEdit={onHandleEdit}
       />
 
@@ -101,8 +86,8 @@ function Content({ setOpen, setAlertLabel }: Props) {
         openModal={openModal}
         setOpenModal={setOpenModal}
         closeModal={closeModal}
-        localRatios={localRatios}
-        setLocalRatios={setLocalRatios}
+        localMemberInfo={localMemberInfo}
+        setLocalMemberInfo={setLocalMemberInfo}
       />
     </Stack>
 

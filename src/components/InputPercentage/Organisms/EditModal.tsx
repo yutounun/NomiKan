@@ -1,7 +1,11 @@
 import { Modal, Stack, TextField, Typography } from "@mui/material";
 import MyButton from "components/Commons/Atoms/MyButton";
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 
+interface IMember {
+  name: string;
+  ratio: number;
+}
 class Props {
   setOpenModal!: (value: boolean) => void;
 
@@ -11,22 +15,33 @@ class Props {
 
   editIndex!: number;
 
-  localRatios!: number[];
+  localMemberInfo!: IMember[];
 
-  setLocalRatios!: Dispatch<SetStateAction<number[]>>;
+  setLocalMemberInfo!: (value: IMember[]) => void;
 }
 
 function Content({
-  openModal, setOpenModal, editIndex, localRatios, setLocalRatios, closeModal
+  openModal, setOpenModal, editIndex, closeModal, localMemberInfo, setLocalMemberInfo
 }: Props) {
   const handleClose = () => {
     setOpenModal(false);
   };
 
+  // value of input in the form
   const [ratio, setRatio] = useState(0);
 
   const handleClickRegButton = () => {
-    setLocalRatios([...localRatios, ratio]);
+    // setLocalMemberInfo([...localMemberInfo, ratio]);
+    // localMemberInfo[editIndex]
+    // Create a new array based on the current state
+    const updatedMemberInfo = [...localMemberInfo];
+
+    // Update the specific object at the given index
+    // eslint-disable-next-line no-param-reassign
+    localMemberInfo[editIndex] = { ...updatedMemberInfo[editIndex], ratio };
+
+    // Set the new state
+    setLocalMemberInfo(updatedMemberInfo);
     handleClose();
     closeModal(ratio);
   };

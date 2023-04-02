@@ -25,6 +25,8 @@
   },
   "plugins": ["react", "@typescript-eslint", "import"],
   "rules": {
+    "no-unused-vars": "off",
+    "no-plusplus": "off",
     "no-use-before-define": "off",
     "comma-dangle": "off",
     "@typescript-eslint/no-use-before-define": ["error"],

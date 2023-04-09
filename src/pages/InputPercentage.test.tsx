@@ -1,7 +1,8 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import InputPercentage from "pages/InputPercentage";
+import { useNomikanStore } from "stores/nomikan";
 
 /**
  * Requirements
@@ -18,6 +19,10 @@ import InputPercentage from "pages/InputPercentage";
  */
 
 describe("InputPercentage page", () => {
+  beforeEach(() => {
+    sessionStorage.clear();
+  });
+
   it("renders correctly", () => {
     render(
       <Router>
@@ -66,53 +71,58 @@ describe("InputPercentage page", () => {
     expect(inputPercentage).not.toHaveClass("Mui-disabled");
   });
 
-  //   it("Renders add button component", () => {
-  //     render(
-  //   <Router>
-  //     <InputPercentage />
-  //   </Router>
-  // );
-  //     const textField = screen.getByRole("button", {
-  //       name: /登録/i
-  //     });
-  //     expect(textField).toBeInTheDocument();
-  //   });
+  it("Renders add button component", () => {
+    render(
+      <Router>
+        <InputPercentage />
+      </Router>
+    );
+    const textField = screen.getByRole("button", {
+      name: /登録/i
+    });
+    expect(textField).toBeInTheDocument();
+  });
 
-  //   it("Disable the registration button initially", () => {
-  //     render(
-  // <Router>
-  //   <InputPercentage />
-  // </Router>
-  // );
+  it("Disable the registration button initially", () => {
+    render(
+      <Router>
+        <InputPercentage />
+      </Router>
+    );
 
-  //     // Make sure the registration button is disabled
-  //     expect(screen.getByText("登録")).toBeDisabled();
-  //   });
+    // Make sure the registration button is disabled
+    expect(screen.getByText("登録")).toBeDisabled();
+  });
 
-  // it("has a registration button component", () => {
-  //   render(
-  //   <Router>
-  //     <InputPercentage />
-  //   </Router>
-  // );
-  //   const regBtn = screen.getByTestId("reg-btn");
-  //   expect(regBtn).toBeInTheDocument();
-  // });
+  it("has a registration button component", () => {
+    render(
+      <Router>
+        <InputPercentage />
+      </Router>
+    );
+    const regBtn = screen.getByRole("button", {
+      name: /登録/i
+    });
+    expect(regBtn).toBeInTheDocument();
+  });
 
-  // it("Renders name, percentage, and edit button on the Member component", () => {
-  // sessionStorage.setItem(
-  // "nomikan-storage", '{"state":{"cost":"","members":["Yuto"]},"version":0}'
-  // );
+  it("Renders name, percentage, and edit button on the Member component", () => {
+    window.sessionStorage.setItem(
+      "nomikan-storage",
+      JSON.stringify({
+        state: { cost: "100", members: [{ name: "Yuto", ratio: 0 }] },
+        version: 0,
+      })
+    );
 
-  // screen.debug(undefined, Infinity);
-  // render(
-  //   <Router>
-  //     <InputPercentage />
-  //   </Router>
-  // );
-  // const memberName = screen.getByText("Yuto");
-  // expect(memberName).toBeInTheDocument();
-  // });
+    render(
+      <Router>
+        <InputPercentage />
+      </Router>
+    );
+
+    expect(screen.getByText("Yuto")).toBeInTheDocument();
+  });
 
   // it("Opens Edit Member modal on clicking edit button", () => {
   //   sessionStorage.setItem(

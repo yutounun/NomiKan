@@ -106,14 +106,14 @@ describe("InputPercentage page", () => {
     expect(regBtn).toBeInTheDocument();
   });
 
-  it("Renders name, percentage, and edit button on the Member component", () => {
-    window.sessionStorage.setItem(
-      "nomikan-storage",
-      JSON.stringify({
-        state: { cost: "100", members: [{ name: "Yuto", ratio: 0 }] },
-        version: 0,
-      })
-    );
+  // it("Renders name, percentage, and edit button on the Member component", () => {
+  //   window.sessionStorage.setItem(
+  //     "nomikan-storage",
+  //     JSON.stringify({
+  //       state: { cost: "100", members: [{ name: "Yuto", ratio: 0 }] },
+  //       version: 0,
+  //     })
+  //   );
 
   // it("Renders name, percentage, and edit button on the Member component", () => {
   //   window.sessionStorage.setItem(

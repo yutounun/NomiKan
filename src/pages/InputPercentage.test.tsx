@@ -100,18 +100,21 @@ describe("InputPercentage page", () => {
   // });
 
   // it("Renders name, percentage, and edit button on the Member component", () => {
-  // sessionStorage.setItem(
-  // "nomikan-storage", '{"state":{"cost":"","members":["Yuto"]},"version":0}'
-  // );
+  //   window.sessionStorage.setItem(
+  //     "nomikan-storage",
+  //     JSON.stringify({
+  //       state: { cost: "100", members: [{ name: "Yuto", ratio: 0 }] },
+  //       version: 0,
+  //     })
+  //   );
 
-  // screen.debug(undefined, Infinity);
-  // render(
-  //   <Router>
-  //     <InputPercentage />
-  //   </Router>
-  // );
-  // const memberName = screen.getByText("Yuto");
-  // expect(memberName).toBeInTheDocument();
+  //   render(
+  //     <Router>
+  //       <InputPercentage />
+  //     </Router>
+  //   );
+
+  //   expect(screen.getByText("Yuto")).toBeInTheDocument();
   // });
 
   // it("Opens Edit Member modal on clicking edit button", () => {

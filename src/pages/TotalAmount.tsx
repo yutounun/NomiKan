@@ -18,7 +18,7 @@ function TotalAmount() {
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
         {/* 合計金額Header */}
-        <MyHeader value="合計金額" />
+        <MyHeader value="total amount" />
 
         {/* Stepper showing the current page */}
         <MyStepper activeStep={0} />
@@ -27,7 +27,7 @@ function TotalAmount() {
         <Content onOpen={handleOnOpen} />
 
         {/* Alert for the completion of registration  */}
-        <MyAlert parentOpen={open} value="登録が完了しました！" />
+        <MyAlert parentOpen={open} value="Successfully completed registration!!" />
       </Stack>
     </BaseLayout>
   );

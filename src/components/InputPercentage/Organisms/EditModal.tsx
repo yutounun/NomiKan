@@ -31,8 +31,6 @@ function Content({
   const [ratio, setRatio] = useState(0);
 
   const handleClickRegButton = () => {
-    // setLocalMemberInfo([...localMemberInfo, ratio]);
-    // localMemberInfo[editIndex]
     // Create a new array based on the current state
     const updatedMemberInfo = [...localMemberInfo];
 
@@ -68,13 +66,13 @@ function Content({
     >
       <Stack flexDirection="column" justifyContent="center" alignItems="center" sx={style}>
         {/* title */}
-        <Typography id="modal-modal-title" variant="h6" mb={2}>
-          編集
+        <Typography id="modal-modal-title" variant="h6" mb={2} fontWeight="bold">
+          EDIT
         </Typography>
 
         {/* Input */}
         <Stack direction="row" alignItems="center">
-          <TextField data-testid="edit-member-input" placeholder="割合を入力" size="small" onBlur={(e) => setRatio(Number(e.target.value))} />
+          <TextField data-testid="edit-member-input" placeholder="Type the ratio" size="small" onBlur={(e) => setRatio(Number(e.target.value))} />
           <Typography ml={2}>%</Typography>
         </Stack>
 
@@ -82,7 +80,7 @@ function Content({
         <MyButton
           dataTestid="submit-edit-btn"
           onClick={handleClickRegButton}
-          value="登録"
+          value="Add To List"
           variant="contained"
           sx={{ borderRadius: "30px", marginTop: "2em", width: { xs: "50%", md: "40%" }, height: { xs: "2em", md: "3em" } }}
         />
@@ -91,7 +89,7 @@ function Content({
         <MyButton
           dataTestid="cancel-edit-btn"
           onClick={handleClose}
-          value="キャンセル"
+          value="Cancel"
           variant="contained"
           color="info"
           sx={{ borderRadius: "30px", marginTop: "1em", width: { xs: "50%", md: "40%" }, height: { xs: "2em", md: "3em" } }}

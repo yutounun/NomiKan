@@ -20,7 +20,7 @@ function InputPercentage() {
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
         {/* 割合入力Header */}
-        <MyHeader value="割合入力" />
+        <MyHeader value="Ratio" />
 
         {/* Stepper showing the current page */}
         <MyStepper activeStep={2} />

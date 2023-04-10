@@ -82,7 +82,7 @@ function Content({
           onClick={handleClickRegButton}
           value="Add To List"
           variant="contained"
-          sx={{ borderRadius: "30px", marginTop: "2em", width: { xs: "50%", md: "40%" }, height: { xs: "2em", md: "3em" } }}
+          sx={{ borderRadius: "30px", marginTop: "2em", width: { xs: "70%", md: "40%" }, height: { xs: "2em", md: "3em" } }}
         />
 
         {/* キャンセルbutton */}
@@ -92,7 +92,7 @@ function Content({
           value="Cancel"
           variant="contained"
           color="info"
-          sx={{ borderRadius: "30px", marginTop: "1em", width: { xs: "50%", md: "40%" }, height: { xs: "2em", md: "3em" } }}
+          sx={{ borderRadius: "30px", marginTop: "1em", width: { xs: "70%", md: "40%" }, height: { xs: "2em", md: "3em" } }}
         />
       </Stack>
     </Modal>

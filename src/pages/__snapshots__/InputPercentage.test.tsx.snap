@@ -9,11 +9,11 @@ exports[`InputPercentage page takes a snapshot 1`] = `
       class="MuiStack-root css-w004l2-MuiStack-root"
     >
       <div
-        class="MuiStack-root css-muz5cb-MuiStack-root"
+        class="MuiStack-root css-wzdyko-MuiStack-root"
         data-testid="header"
       >
         <h1
-          class="MuiTypography-root MuiTypography-h1 css-vh66nq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h1 css-1doh40h-MuiTypography-root"
         >
           割合入力
         </h1>
@@ -34,7 +34,7 @@ exports[`InputPercentage page takes a snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="MuiBox-root css-pb02ub"
+        class="MuiBox-root css-jxhp8u"
       >
         <div
           class="MuiStepper-root MuiStepper-horizontal MuiStepper-alternativeLabel css-10mg1vw-MuiStepper-root"
@@ -235,10 +235,10 @@ exports[`InputPercentage page takes a snapshot 1`] = `
         class="MuiStack-root css-1qvmp2n-MuiStack-root"
       >
         <div
-          class="MuiStack-root css-mzgixp-MuiStack-root"
+          class="MuiStack-root css-hmog4a-MuiStack-root"
         />
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1ujftte-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1fs9aek-MuiButtonBase-root-MuiButton-root"
           disabled=""
           tabindex="-1"
           type="button"

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import MemberInput from "components/AddMembers/Molecules/MemberInput";
 import EditModal from "components/AddMembers/Organisms/EditModal";
 import MyButton from "components/Commons/Atoms/MyButton";
-// TODO: use Link instead of <a>
 import { useNavigate } from "react-router-dom";
 import { useNomikanStore } from "stores/nomikan";
 import MembersList from "components/AddMembers/Organisms/MembersList";
@@ -116,7 +115,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
         disabled={localMemberNames.length === 0}
         value="登録"
         variant="contained"
-        sx={{ borderRadius: "30px", width: { lg: "60%", xs: "60%" }, height: { md: "3em" } }}
+        sx={{ borderRadius: "30px", width: { lg: "30%", xs: "80%" }, height: { md: "3em" } }}
       />
 
       <EditModal

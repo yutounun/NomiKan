@@ -3,6 +3,7 @@ import MyButton from "components/Commons/Atoms/MyButton";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useNomikanStore } from "stores/nomikan";
+import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 import CostTextField from "../Atoms/CostTextField";
 
 class Props {
@@ -39,6 +40,7 @@ function Content({ onOpen }: Props) {
     >
       <CostTextField setLocalCost={setLocalCost} value={localCost} />
       <MyButton
+        startIcon={<DoneOutlineIcon />}
         onClick={handleClickButton}
         disabled={localCost === ""}
         value="登録"

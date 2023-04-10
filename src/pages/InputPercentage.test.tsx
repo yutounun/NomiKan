@@ -1,8 +1,7 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import InputPercentage from "pages/InputPercentage";
-import { useNomikanStore } from "stores/nomikan";
 
 /**
  * Requirements

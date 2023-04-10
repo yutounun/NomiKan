@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Stack } from "@mui/material";
 
 import BaseLayout from "components/Commons/Layout/BaseLayout";
 import MyHeader from "components/Commons/Organisms/MyHeader";
 import MyStepper from "components/Commons/Organisms/MyStepper";
-import Content from "components/InputPercentage/Organisms/Content";
+import Content from "components/Result/Organisms/Content";
 
 function InputPercentage() {
-  const [, setOpen] = useState(false);
-  const [, setAlertLabel] = useState("");
-
   return (
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
@@ -20,7 +17,7 @@ function InputPercentage() {
         <MyStepper activeStep={3} />
 
         {/* Content including input and button */}
-        <Content setOpen={setOpen} setAlertLabel={setAlertLabel} />
+        <Content />
 
       </Stack>
     </BaseLayout>

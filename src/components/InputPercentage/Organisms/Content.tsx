@@ -27,7 +27,6 @@ function Content({ setOpen, setAlertLabel }: Props) {
 
   /** save member information on store and navigate to result page */
   const handleClickRegButton = () => {
-    // TODO: navigate to result page
     setMembers(localMemberInfo);
     navigate("/result");
   };

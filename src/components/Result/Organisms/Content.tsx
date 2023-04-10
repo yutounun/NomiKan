@@ -12,9 +12,8 @@ function Content() {
       direction="column"
       alignItems="center"
       mt={10}
-      width="100%"
       gap="2em"
-      sx={{ maxWidth: "80%" }}
+      sx={{ width: { lg: "60%", xs: "90%" } }}
     >
       <Box sx={{ display: { xs: "none", lg: "block" } }}>
         <ResultIcon height="180" width="400" />

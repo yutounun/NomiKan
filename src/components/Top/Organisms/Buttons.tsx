@@ -38,7 +38,7 @@ function Buttons() {
             value={button.label}
             color="primary"
             size="large"
-            sx={{ borderRadius: "10px", width: { xs: "60%", lg: "80%" } }}
+            sx={{ borderRadius: "10px", width: { xs: "60%", lg: "80%" }, marginBottom: "10px" }}
           />
         </a>
       ))}

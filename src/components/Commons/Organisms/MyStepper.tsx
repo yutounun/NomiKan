@@ -8,7 +8,7 @@ function MyStepper({ activeStep }: Props) {
   const steps = ["合計金額", "メンバー追加", "割合入力", "結果"];
 
   return (
-    <Box sx={{ width: "100%" }} mt={10}>
+    <Box sx={{ width: "100%", marginTop: { lg: "7rem", xs: "5rem" } }}>
       <Stepper activeStep={activeStep} data-testid="stepper" alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>

@@ -16,8 +16,9 @@ function Explanation() {
         component="span"
         sx={{
           color: "info.main",
-          fontSize: { lg: "1.5rem", xs: "1em" },
+          fontSize: { lg: "1.2rem", xs: "1em" },
         }}
+        mb={2}
       >
         部長のお会計をお助け！
       </Typography>
@@ -29,9 +30,10 @@ function Explanation() {
       </Box>
       <Typography
         variant="subtitle2"
-        pt={2}
+        pt={3}
+        pb={3}
         component="span"
-        sx={{ textAlign: "center", fontSize: { lg: "1.5rem", xs: "1em" }, width: { lg: "100%", xs: "80%" }, }}
+        sx={{ textAlign: "center", fontSize: { lg: "1rem", xs: "1em" }, width: { lg: "100%", xs: "80%" }, }}
       >
         各メンバーの支払額を%で計算することができます
       </Typography>

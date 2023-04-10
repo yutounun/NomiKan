@@ -35,6 +35,7 @@ function Content({ onOpen }: Props) {
       mt={10}
       alignItems="center"
       gap="70px"
+      width="100%"
     >
       <CostTextField setLocalCost={setLocalCost} value={localCost} />
       <MyButton
@@ -42,7 +43,7 @@ function Content({ onOpen }: Props) {
         disabled={localCost === ""}
         value="登録"
         variant="contained"
-        sx={{ borderRadius: "30px", width: { lg: "60%", xs: "80%" }, height: { md: "3em" } }}
+        sx={{ borderRadius: "30px", width: { lg: "30%", xs: "60%" }, height: { md: "3em" } }}
       />
     </Stack>
   );

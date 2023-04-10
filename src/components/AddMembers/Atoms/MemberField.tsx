@@ -9,7 +9,7 @@ class Props {
 function CostTextField({ setTmpMemberName, tmpMemberName }: Props) {
   return (
     <TextField
-      label="メンバーを追加"
+      label="Add member name"
       value={tmpMemberName}
       size="small"
       type="string"

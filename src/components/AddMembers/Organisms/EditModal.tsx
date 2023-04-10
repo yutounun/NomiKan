@@ -59,18 +59,18 @@ function Content({
     >
       <Stack flexDirection="column" justifyContent="center" alignItems="center" sx={style}>
         {/* title */}
-        <Typography id="modal-modal-title" variant="h6">
-          名前の編集
+        <Typography id="modal-modal-title" variant="h6" fontWeight="bold">
+          EDIT
         </Typography>
 
         {/* Input */}
-        <TextField data-testid="edit-member-input" placeholder="メンバー名を入力" size="small" sx={{ marginTop: "1em" }} onChange={(e) => setEditName(e.target.value)} />
+        <TextField data-testid="edit-member-input" placeholder="Type the name" size="small" sx={{ marginTop: "1em" }} onChange={(e) => setEditName(e.target.value)} />
 
         {/* 登録button */}
         <MyButton
           dataTestid="submit-edit-btn"
           onClick={handleClickRegButton}
-          value="登録"
+          value="Submit"
           variant="contained"
           sx={{ borderRadius: "30px", marginTop: "2em", width: { xs: "50%", md: "40%" }, height: { xs: "2em", md: "3em" } }}
         />
@@ -79,7 +79,7 @@ function Content({
         <MyButton
           dataTestid="cancel-edit-btn"
           onClick={handleClose}
-          value="キャンセル"
+          value="Cancel"
           variant="contained"
           color="info"
           sx={{ borderRadius: "30px", marginTop: "1em", width: { xs: "50%", md: "40%" }, height: { xs: "2em", md: "3em" } }}

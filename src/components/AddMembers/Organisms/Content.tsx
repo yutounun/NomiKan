@@ -40,11 +40,11 @@ function Content({ setOpen, setAlertLabel }: Props) {
     // if input name is duplicated, pop up the warning
     // if not pop up the information to the user
     if (isDuplicated) {
-      setAlertLabel("同じ名前のメンバーが存在します。");
+      setAlertLabel("The name is duplicated!!");
       setOpen(true);
     } else {
       setOpen(true);
-      setAlertLabel("メンバーを追加しました！");
+      setAlertLabel("Add new member!!");
       setLocalMemberNames((prevArray) => [...prevArray, newName]);
       const rtn = localMemberNames.map((name) => {
         const ans = {
@@ -80,7 +80,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
 
     // open the alert
     setOpen(true);
-    setAlertLabel("メンバーを削除しました！");
+    setAlertLabel("Remove member!!");
   };
 
   const onHandleEdit = (index: number) => {
@@ -107,13 +107,13 @@ function Content({ setOpen, setAlertLabel }: Props) {
         removeMember={removeMember}
       />
 
-      {/* 「登録」Button */}
+      {/* Submit Button */}
       <MyButton
         data-testid="reg-btn"
         startIcon={<DoneOutlineIcon />}
         onClick={handleClickRegButton}
         disabled={localMemberNames.length === 0}
-        value="登録"
+        value="Submit"
         variant="contained"
         sx={{ borderRadius: "30px", width: { lg: "30%", xs: "80%" }, height: { md: "3em" } }}
       />

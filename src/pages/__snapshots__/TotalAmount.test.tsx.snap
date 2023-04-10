@@ -9,11 +9,11 @@ exports[`TotalAmount takes a snapshot 1`] = `
       class="MuiStack-root css-w004l2-MuiStack-root"
     >
       <div
-        class="MuiStack-root css-muz5cb-MuiStack-root"
+        class="MuiStack-root css-wzdyko-MuiStack-root"
         data-testid="header"
       >
         <h1
-          class="MuiTypography-root MuiTypography-h1 css-vh66nq-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h1 css-1doh40h-MuiTypography-root"
         >
           合計金額
         </h1>
@@ -34,7 +34,7 @@ exports[`TotalAmount takes a snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="MuiBox-root css-pb02ub"
+        class="MuiBox-root css-jxhp8u"
       >
         <div
           class="MuiStepper-root MuiStepper-horizontal MuiStepper-alternativeLabel css-10mg1vw-MuiStepper-root"
@@ -252,49 +252,73 @@ exports[`TotalAmount takes a snapshot 1`] = `
         </div>
       </div>
       <div
-        class="MuiStack-root css-1im4rj0-MuiStack-root"
+        class="MuiStack-root css-18tvtp4-MuiStack-root"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root css-e9kz5q-MuiFormControl-root-MuiTextField-root"
+          class="MuiStack-root css-1q3ulhk-MuiStack-root"
         >
-          <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            for=":r2:"
-            id=":r2:-label"
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1gvvk8k-MuiTypography-root"
           >
-            金額を入力してね
-          </label>
+            ¥
+          </p>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiFormControl-root MuiTextField-root css-4qha4g-MuiFormControl-root-MuiTextField-root"
           >
-            <input
-              aria-invalid="false"
-              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":r2:"
-              type="number"
-              value=""
-            />
-            <fieldset
-              aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1pysi21-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              for=":r2:"
+              id=":r2:-label"
             >
-              <legend
-                class="css-yjsfm1"
+              金額を入力してね
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
+                id=":r2:"
+                type="number"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
               >
-                <span>
-                  金額を入力してね
-                </span>
-              </legend>
-            </fieldset>
+                <legend
+                  class="css-yjsfm1"
+                >
+                  <span>
+                    金額を入力してね
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
           </div>
         </div>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1dcvikp-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1hby8u7-MuiButtonBase-root-MuiButton-root"
           disabled=""
           tabindex="-1"
           type="button"
         >
+          <span
+            class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="DoneOutlineIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m19.77 5.03 1.4 1.4L8.43 19.17l-5.6-5.6 1.4-1.4 4.2 4.2L19.77 5.03m0-2.83L8.43 13.54l-4.2-4.2L0 13.57 8.43 22 24 6.43 19.77 2.2z"
+              />
+            </svg>
+          </span>
           登録
         </button>
       </div>

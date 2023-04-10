@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { Stack, TextField, Typography } from "@mui/material";
 import React from "react";
 
 class Props {
@@ -8,20 +8,25 @@ class Props {
 }
 function CostTextField({ setLocalCost, value }: Props) {
   return (
-    <TextField
-      label="金額を入力してね"
-      value={value}
-      size="small"
-      type="number"
-      variant="outlined"
-      onChange={(e) => setLocalCost(e.target.value)}
-      sx={{
-        width: {
-          lg: "40em",
-          xs: "200px",
-        },
-      }}
-    />
+    <Stack direction="row" width="100%" alignItems="center" justifyContent="center" gap={2}>
+      <Typography fontSize={20}>
+        ¥
+      </Typography>
+      <TextField
+        label="金額を入力してね"
+        value={value}
+        size="small"
+        type="number"
+        variant="outlined"
+        onChange={(e) => setLocalCost(e.target.value)}
+        sx={{
+          width: {
+            lg: "40%",
+            xs: "60%",
+          },
+        }}
+      />
+    </Stack>
   );
 }
 

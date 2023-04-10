@@ -17,14 +17,14 @@ function MyHeader({ value, hideGoBack }: Props) {
         justifyContent="center"
         alignItems="center"
         data-testid="header"
-        mt={3}
+        mt={2.8}
         sx={{
           backgroundColor: "white",
           position: "fixed",
           top: 0,
         }}
       >
-        <Typography variant="h1" sx={{ fontSize: { lg: "28px", xs: "16px" } }}>{value}</Typography>
+        <Typography variant="h1" sx={{ fontSize: { lg: "40px", xs: "25px" } }}>{value}</Typography>
       </Stack>
 
       {/* In case go back btn isn't hidden */}

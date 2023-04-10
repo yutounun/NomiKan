@@ -2,11 +2,10 @@ import { Stack } from "@mui/material";
 import React, { useState } from "react";
 import EditModal from "components/InputPercentage/Organisms/EditModal";
 import MyButton from "components/Commons/Atoms/MyButton";
-// TODO: use Link instead of <a>
-// import { Link } from "react-router-dom";
 import { useNomikanStore } from "stores/nomikan";
 import MembersList from "components/InputPercentage/Organisms/MembersList";
 import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
+import { useNavigate } from "react-router-dom";
 
 class Props {
   setOpen!: (value: boolean) => void;
@@ -20,6 +19,7 @@ interface IMember {
 }
 
 function Content({ setOpen, setAlertLabel }: Props) {
+  const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(false);
   const [editIndex, setEditIndex] = useState(0);
   const [members, setMembers] = useNomikanStore((state) => [state.members, state.setMembers]);
@@ -27,8 +27,8 @@ function Content({ setOpen, setAlertLabel }: Props) {
 
   /** save member information on store and navigate to result page */
   const handleClickRegButton = () => {
-    // TODO: navigate to result page
     setMembers(localMemberInfo);
+    navigate("/result");
   };
 
   const onHandleEdit = (index: number) => {

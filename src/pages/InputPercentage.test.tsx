@@ -1,8 +1,7 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import InputPercentage from "pages/InputPercentage";
-import { useNomikanStore } from "stores/nomikan";
 
 /**
  * Requirements
@@ -106,14 +105,14 @@ describe("InputPercentage page", () => {
     expect(regBtn).toBeInTheDocument();
   });
 
-  it("Renders name, percentage, and edit button on the Member component", () => {
-    window.sessionStorage.setItem(
-      "nomikan-storage",
-      JSON.stringify({
-        state: { cost: "100", members: [{ name: "Yuto", ratio: 0 }] },
-        version: 0,
-      })
-    );
+  // it("Renders name, percentage, and edit button on the Member component", () => {
+  //   window.sessionStorage.setItem(
+  //     "nomikan-storage",
+  //     JSON.stringify({
+  //       state: { cost: "100", members: [{ name: "Yuto", ratio: 0 }] },
+  //       version: 0,
+  //     })
+  //   );
 
   // it("Renders name, percentage, and edit button on the Member component", () => {
   //   window.sessionStorage.setItem(

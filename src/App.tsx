@@ -9,6 +9,7 @@ import Top from "pages/Top";
 import TotalAmount from "pages/TotalAmount";
 import AddMembers from "pages/AddMembers";
 import InputPercentage from "pages/InputPercentage";
+import Result from "pages/Result";
 
 function App() {
   // Check if the device is on dark mode
@@ -25,6 +26,7 @@ function App() {
           <Route path="/total-amount" element={<TotalAmount />} />
           <Route path="/add-members" element={<AddMembers />} />
           <Route path="/input-percentage" element={<InputPercentage />} />
+          <Route path="/result" element={<Result />} />
         </Routes>
       </Router>
     </ThemeProvider>

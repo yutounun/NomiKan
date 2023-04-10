@@ -77,7 +77,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
         value="登録"
         disabled={!showsRegBtn()}
         variant="contained"
-        sx={{ borderRadius: "30px", width: { lg: "60%", xs: "60%" }, height: { md: "3em" } }}
+        sx={{ borderRadius: "30px", width: { lg: "30%", xs: "80%" }, height: { md: "3em" } }}
       />
 
       <EditModal

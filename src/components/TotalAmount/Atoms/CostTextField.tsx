@@ -13,7 +13,7 @@ function CostTextField({ setLocalCost, value }: Props) {
         ¥
       </Typography>
       <TextField
-        label="金額を入力してね"
+        label="Enter the total cost"
         value={value}
         size="small"
         type="number"

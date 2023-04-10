@@ -43,7 +43,7 @@ function Content({ onOpen }: Props) {
         startIcon={<DoneOutlineIcon />}
         onClick={handleClickButton}
         disabled={localCost === ""}
-        value="登録"
+        value="Submit"
         variant="contained"
         sx={{ borderRadius: "30px", width: { lg: "30%", xs: "60%" }, height: { md: "3em" } }}
       />

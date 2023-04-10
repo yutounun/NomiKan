@@ -17,8 +17,8 @@ function TotalAmount() {
   return (
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
-        {/* 合計金額Header */}
-        <MyHeader value="total amount" />
+        {/* Total Amount Header */}
+        <MyHeader value="Total Amount" />
 
         {/* Stepper showing the current page */}
         <MyStepper activeStep={0} />

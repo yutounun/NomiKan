@@ -15,12 +15,14 @@ function Explanation() {
         variant="subtitle1"
         component="span"
         sx={{
+          textAlign: "center",
           color: "info.main",
           fontSize: { lg: "1.2rem", xs: "1em" },
         }}
         mb={2}
+        width="80%"
       >
-        部長のお会計をお助け！
+        Help organizers to calculate the payment amount of each member
       </Typography>
       <Box sx={{ display: { xs: "none", lg: "block" } }}>
         <Cheers height="300px" width="500px" />
@@ -33,9 +35,9 @@ function Explanation() {
         pt={3}
         pb={3}
         component="span"
-        sx={{ textAlign: "center", fontSize: { lg: "1rem", xs: "1em" }, width: { lg: "100%", xs: "80%" }, }}
+        sx={{ textAlign: "center", fontSize: { lg: "1rem", xs: "1em" }, width: { lg: "80%", xs: "80%" }, }}
       >
-        各メンバーの支払額を%で計算することができます
+        Calculate the payment amount for each member in percentage units.
       </Typography>
     </Stack>
   );

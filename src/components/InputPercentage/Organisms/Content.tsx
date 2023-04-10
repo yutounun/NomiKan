@@ -74,7 +74,7 @@ function Content({ setOpen, setAlertLabel }: Props) {
       <MyButton
         startIcon={<DoneOutlineIcon />}
         onClick={handleClickRegButton}
-        value="登録"
+        value="Submit"
         disabled={!showsRegBtn()}
         variant="contained"
         sx={{ borderRadius: "30px", width: { lg: "30%", xs: "80%" }, height: { md: "3em" } }}

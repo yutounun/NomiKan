@@ -5,7 +5,7 @@ class Props {
   activeStep = 0;
 }
 function MyStepper({ activeStep }: Props) {
-  const steps = ["合計金額", "メンバー追加", "割合入力", "結果"];
+  const steps = ["total amount", "members", "ratio", "result"];
 
   return (
     <Box sx={{ width: "100%", marginTop: { lg: "7rem", xs: "5rem" } }}>

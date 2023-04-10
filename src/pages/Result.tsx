@@ -10,8 +10,8 @@ function InputPercentage() {
   return (
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
-        {/* 結果Header */}
-        <MyHeader value="結果" />
+        {/* Result Header */}
+        <MyHeader value="Result" />
 
         {/* Stepper showing the current page */}
         <MyStepper activeStep={3} />

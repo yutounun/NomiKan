@@ -21,7 +21,7 @@ function MembersList({ localMemberNames, onHandleEdit, removeMember } : Props) {
             <EditIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} onClick={() => onHandleEdit(index)} data-testid="edit-btn" />
             <DeleteSweepIcon sx={{ cursor: "pointer", width: { lg: "5%", xs: "15%" } }} onClick={() => removeMember(index)} data-testid="delete-btn" />
           </Stack>
-        )) : <Typography fontSize={15} textAlign="center">メンバーを追加してください</Typography>}
+        )) : <Typography fontSize={15} textAlign="center">Please add members</Typography>}
     </Stack>
   );
 }

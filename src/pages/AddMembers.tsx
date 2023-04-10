@@ -20,7 +20,7 @@ function AddMembers() {
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
         {/* 合計金額Header */}
-        <MyHeader value="メンバー追加" />
+        <MyHeader value="Members" />
 
         {/* Stepper showing the current page */}
         <MyStepper activeStep={1} />

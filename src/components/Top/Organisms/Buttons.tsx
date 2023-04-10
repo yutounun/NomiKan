@@ -4,27 +4,23 @@ import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
 import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
 import MyButton from "components/Commons/Atoms/MyButton";
-// TODO: use Link instead of <a>
-// import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
 
 function Buttons() {
   const buttons = [
     {
       to: "/total-amount",
-      label: "はじめる",
+      label: "START",
       icon: <RocketLaunchOutlinedIcon />,
     },
     {
-      // TODO: update path
       to: "/total-amount",
-      label: "会員登録",
+      label: "SIGNUP",
       icon: <HowToRegOutlinedIcon />,
     },
     {
-      // TODO: update path
       to: "/total-amount",
-      label: "ログイン",
+      label: "SIGNIN",
       icon: <LoginOutlinedIcon />,
     },
   ];

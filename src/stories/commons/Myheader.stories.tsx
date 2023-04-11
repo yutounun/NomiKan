@@ -25,20 +25,20 @@ NomiKan.args = {
 
 export const TotalAmount = Template.bind({});
 TotalAmount.args = {
-  value: "合計金額",
+  value: "Total Amount",
 };
 
 export const InputPercentage = Template.bind({});
 InputPercentage.args = {
-  value: "割合入力",
+  value: "Ratio",
 };
 
 export const AddMembers = Template.bind({});
 AddMembers.args = {
-  value: "メンバー追加",
+  value: "Members",
 };
 
 export const Result = Template.bind({});
 Result.args = {
-  value: "結果",
+  value: "Result",
 };

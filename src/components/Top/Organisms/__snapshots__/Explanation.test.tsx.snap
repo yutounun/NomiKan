@@ -6,9 +6,9 @@ exports[`Explanation takes a snapshot 1`] = `
     class="MuiStack-root css-n74xo2-MuiStack-root"
   >
     <span
-      class="MuiTypography-root MuiTypography-subtitle1 css-u6axfk-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-subtitle1 css-lwc1kd-MuiTypography-root"
     >
-      部長のお会計をお助け！
+      Help organizers to calculate the payment amount of each member
     </span>
     <div
       class="MuiBox-root css-6k8fz8"
@@ -571,9 +571,9 @@ exports[`Explanation takes a snapshot 1`] = `
       </svg>
     </div>
     <span
-      class="MuiTypography-root MuiTypography-subtitle2 css-deq3h0-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-subtitle2 css-1qdo9mx-MuiTypography-root"
     >
-      各メンバーの支払額を%で計算することができます
+      Calculate the payment amount for each member in percentage units.
     </span>
   </div>
 </DocumentFragment>

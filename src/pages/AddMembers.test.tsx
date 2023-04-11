@@ -9,10 +9,10 @@ import AddMembers from "./AddMembers";
  * 2. TextField component must be rendered with a placeholder xx
  * 3. Reg Button component must be rendered xx
  * 4. AddButton component must be rendered xx
- * 5. If none of members is added, 「メンバーを追加してください」 must be displayed xx
+ * 5. If none of members is added, Add member nameしてください」 must be displayed xx
  *    and the registration button must be disabled xx
  * 6. If any characters aren't typed, the add button must be disabled xx
- * 7. TextField component has placeholder showing 「メンバーを追加してください」 xx
+ * 7. TextField component has placeholder showing Add member nameしてください」 xx
  * 8. If any member is added, list the member in the member-list component xx
  * 9. The Member component has name, delete button, and edit button xx
  * 10. Clicking edit button opens Edit Member modal xx
@@ -35,35 +35,35 @@ describe("AddMembers page", () => {
 
   it("has myStepper component with the current step", () => {
     render(<Router><AddMembers /></Router>);
-    const AddMembersStep = screen.getByTestId("合計金額");
+    const AddMembersStep = screen.getByTestId("total amount");
     // Only inactive steps have "Mui-disabled" class
     expect(AddMembersStep).not.toHaveClass("Mui-disabled");
 
-    const addMembersStep = screen.getByTestId("メンバー追加");
+    const addMembersStep = screen.getByTestId("members");
     expect(addMembersStep).not.toHaveClass("Mui-disabled");
   });
 
   it("has a textField component with a placeholder", () => {
     render(<Router><AddMembers /></Router>);
     const textField = screen.getByRole("textbox", {
-      name: /メンバーを追加/i
+      name: /Add member name/i
     });
     expect(textField).toBeInTheDocument();
   });
 
-  it("has メンバーを追加してください with the disabled registration button and the disabled add button if none of members are added", () => {
+  it("has Please add members with the disabled registration button and the disabled add button if none of members are added", () => {
     render(<Router><AddMembers /></Router>);
-    const text = screen.getByText("メンバーを追加してください");
+    const text = screen.getByText("Please add members");
     expect(text).toBeInTheDocument();
 
     // Make sure the registration button is disabled
-    expect(screen.getByText("登録")).toBeDisabled();
+    expect(screen.getByText("Submit")).toBeDisabled();
   });
 
   it("has a registration button component", () => {
     render(<Router><AddMembers /></Router>);
     const regBtn = screen.getByRole("button", {
-      name: /登録/i
+      name: /Submit/i
     });
     expect(regBtn).toBeInTheDocument();
   });
@@ -78,7 +78,7 @@ describe("AddMembers page", () => {
     render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
-      name: /メンバーを追加/i
+      name: /Add member name/i
     });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
@@ -107,7 +107,7 @@ describe("AddMembers page", () => {
     render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
-      name: /メンバーを追加/i
+      name: /Add member name/i
     });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
@@ -139,7 +139,7 @@ describe("AddMembers page", () => {
     render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
-      name: /メンバーを追加/i
+      name: /Add member name/i
     });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
@@ -163,14 +163,14 @@ describe("AddMembers page", () => {
       })
     );
 
-    expect(screen.getByText("名前の編集")).toBeInTheDocument();
+    expect(screen.getByText("EDIT")).toBeInTheDocument();
   });
 
   it("shows edit modal and let you register the updated name", () => {
     render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
-      name: /メンバーを追加/i
+      name: /Add member name/i
     });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
@@ -217,7 +217,7 @@ describe("AddMembers page", () => {
     render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
-      name: /メンバーを追加/i
+      name: /Add member name/i
     });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
@@ -266,7 +266,7 @@ describe("AddMembers page", () => {
     render(<Router><AddMembers /></Router>);
     // Type on TextField component using fireEvent
     const textField = screen.getByRole("textbox", {
-      name: /メンバーを追加/i
+      name: /Add member name/i
     });
     fireEvent.change(textField, { target: { value: "Yuto" } });
 
@@ -279,13 +279,13 @@ describe("AddMembers page", () => {
       })
     );
 
-    expect(screen.getByText(/メンバーを追加しました！/i)).toBeInTheDocument();
+    expect(screen.getByText(/Add new member!!/i)).toBeInTheDocument();
   });
 
-  it("Shows 'メンバー追加' on the title", () => {
+  it("Shows 'Members' on the title", () => {
     render(<Router><AddMembers /></Router>);
     const header = screen.getByRole("heading", {
-      name: /メンバー追加/i,
+      name: /Members/i,
     });
 
     expect(header).toBeInTheDocument();

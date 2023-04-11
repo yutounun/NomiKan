@@ -15,7 +15,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
         <h1
           class="MuiTypography-root MuiTypography-h1 css-1doh40h-MuiTypography-root"
         >
-          メンバー追加
+          Members
         </h1>
       </div>
       <div
@@ -45,7 +45,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
           >
             <span
               class="MuiStepLabel-root MuiStepLabel-horizontal MuiStepLabel-alternativeLabel css-ascpo7-MuiStepLabel-root"
-              data-testid="合計金額"
+              data-testid="total amount"
             >
               <span
                 class="MuiStepLabel-iconContainer Mui-completed MuiStepLabel-alternativeLabel css-vnkopk-MuiStepLabel-iconContainer"
@@ -71,7 +71,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
                   >
-                    合計金額
+                    total amount
                   </p>
                 </span>
               </span>
@@ -89,7 +89,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
             </div>
             <span
               class="MuiStepLabel-root MuiStepLabel-horizontal MuiStepLabel-alternativeLabel css-ascpo7-MuiStepLabel-root"
-              data-testid="メンバー追加"
+              data-testid="members"
             >
               <span
                 class="MuiStepLabel-iconContainer Mui-active MuiStepLabel-alternativeLabel css-vnkopk-MuiStepLabel-iconContainer"
@@ -125,7 +125,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
                   >
-                    メンバー追加
+                    members
                   </p>
                 </span>
               </span>
@@ -143,7 +143,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
             </div>
             <span
               class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled MuiStepLabel-alternativeLabel css-ascpo7-MuiStepLabel-root"
-              data-testid="割合入力"
+              data-testid="ratio"
             >
               <span
                 class="MuiStepLabel-iconContainer Mui-disabled MuiStepLabel-alternativeLabel css-vnkopk-MuiStepLabel-iconContainer"
@@ -179,7 +179,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
                   >
-                    割合入力
+                    ratio
                   </p>
                 </span>
               </span>
@@ -197,7 +197,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
             </div>
             <span
               class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled MuiStepLabel-alternativeLabel css-ascpo7-MuiStepLabel-root"
-              data-testid="結果"
+              data-testid="result"
             >
               <span
                 class="MuiStepLabel-iconContainer Mui-disabled MuiStepLabel-alternativeLabel css-vnkopk-MuiStepLabel-iconContainer"
@@ -233,7 +233,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
                   <p
                     class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
                   >
-                    結果
+                    result
                   </p>
                 </span>
               </span>
@@ -256,7 +256,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
               for=":r1:"
               id=":r1:-label"
             >
-              メンバーを追加
+              Add member name
             </label>
             <div
               class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
@@ -276,7 +276,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
                   class="css-yjsfm1"
                 >
                   <span>
-                    メンバーを追加
+                    Add member name
                   </span>
                 </legend>
               </fieldset>
@@ -310,7 +310,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
           <p
             class="MuiTypography-root MuiTypography-body1 css-1wn5ih4-MuiTypography-root"
           >
-            メンバーを追加してください
+            Please add members
           </p>
         </div>
         <button
@@ -334,7 +334,7 @@ exports[`AddMembers page takes a snapshot 1`] = `
               />
             </svg>
           </span>
-          登録
+          Submit
         </button>
       </div>
     </div>

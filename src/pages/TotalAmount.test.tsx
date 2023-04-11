@@ -24,7 +24,7 @@ describe("TotalAmount", () => {
         <TotalAmount />
       </Router>
     );
-    expect(screen.getByRole("button", { name: /登録/i })).toBeDisabled();
+    expect(screen.getByRole("button", { name: /Submit/i })).toBeDisabled();
   });
 
   it("renders correctly", () => {
@@ -50,10 +50,10 @@ describe("TotalAmount", () => {
         <TotalAmount />
       </Router>
     );
-    expect(screen.getByTestId("合計金額")).toBeInTheDocument();
-    expect(screen.getByTestId("メンバー追加")).toBeInTheDocument();
-    expect(screen.getByTestId("割合入力")).toBeInTheDocument();
-    expect(screen.getByTestId("結果")).toBeInTheDocument();
+    expect(screen.getByTestId("total amount")).toBeInTheDocument();
+    expect(screen.getByTestId("members")).toBeInTheDocument();
+    expect(screen.getByTestId("ratio")).toBeInTheDocument();
+    expect(screen.getByTestId("result")).toBeInTheDocument();
   });
 
   it("renders an Input component with a placeholder", () => {
@@ -62,7 +62,7 @@ describe("TotalAmount", () => {
         <TotalAmount />
       </Router>
     );
-    const inputElem = screen.getByLabelText("金額を入力してね");
+    const inputElem = screen.getByLabelText("Enter the total cost");
     expect(inputElem).toBeInTheDocument();
   });
 
@@ -85,21 +85,21 @@ describe("TotalAmount", () => {
     // Type cost in the textbox field
     fireEvent.change(
       screen.getByRole("spinbutton", {
-        name: /金額を入力してね/i,
+        name: /Enter the total cost/i,
       }),
       { target: { value: "500" } }
     );
 
     // Click registration button
     fireEvent(
-      screen.getByRole("button", { name: /登録/i }),
+      screen.getByRole("button", { name: /Submit/i }),
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,
       })
     );
 
-    expect(screen.getByText("登録が完了しました！")).toBeInTheDocument();
+    expect(screen.getByText("Successfully completed registration!!")).toBeInTheDocument();
   });
 
   it("renders a Button component", () => {
@@ -109,7 +109,7 @@ describe("TotalAmount", () => {
       </Router>
     );
     const buttonElem = screen.getByRole("spinbutton", {
-      name: /金額を入力してね/i,
+      name: /Enter the total cost/i,
     });
     expect(buttonElem).toBeInTheDocument();
   });
@@ -120,7 +120,7 @@ describe("TotalAmount", () => {
         <TotalAmount />
       </Router>
     );
-    const stepperElem = screen.getByTestId("合計金額");
+    const stepperElem = screen.getByTestId("total amount");
 
     // Only inactive steps have "Mui-disabled" class
     expect(stepperElem).not.toHaveClass("Mui-disabled");
@@ -136,14 +136,14 @@ describe("TotalAmount", () => {
     // Type cost in the textbox field
     fireEvent.change(
       screen.getByRole("spinbutton", {
-        name: /金額を入力してね/i,
+        name: /Enter the total cost/i,
       }),
       { target: { value: "500" } }
     );
 
     // Click registration button
     fireEvent(
-      screen.getByRole("button", { name: /登録/i }),
+      screen.getByRole("button", { name: /Submit/i }),
       new MouseEvent("click", {
         bubbles: true,
         cancelable: true,

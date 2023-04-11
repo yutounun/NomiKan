@@ -47,7 +47,7 @@ describe("InputPercentage page", () => {
     );
 
     const header = screen.getByRole("heading", {
-      name: /割合入力/i,
+      name: /ratio/i,
     });
 
     expect(header).toBeInTheDocument();
@@ -59,14 +59,14 @@ describe("InputPercentage page", () => {
         <InputPercentage />
       </Router>
     );
-    const totalAmountStep = screen.getByTestId("合計金額");
+    const totalAmountStep = screen.getByTestId("total amount");
     // Only inactive steps have "Mui-disabled" class
     expect(totalAmountStep).not.toHaveClass("Mui-disabled");
 
-    const addMemberStep = screen.getByTestId("メンバー追加");
+    const addMemberStep = screen.getByTestId("members");
     expect(addMemberStep).not.toHaveClass("Mui-disabled");
 
-    const inputPercentage = screen.getByTestId("割合入力");
+    const inputPercentage = screen.getByTestId("ratio");
     expect(inputPercentage).not.toHaveClass("Mui-disabled");
   });
 
@@ -77,7 +77,7 @@ describe("InputPercentage page", () => {
       </Router>
     );
     const textField = screen.getByRole("button", {
-      name: /登録/i
+      name: /Submit/i
     });
     expect(textField).toBeInTheDocument();
   });
@@ -90,7 +90,7 @@ describe("InputPercentage page", () => {
     );
 
     // Make sure the registration button is disabled
-    expect(screen.getByText("登録")).toBeDisabled();
+    expect(screen.getByText("Submit")).toBeDisabled();
   });
 
   it("has a registration button component", () => {
@@ -100,7 +100,7 @@ describe("InputPercentage page", () => {
       </Router>
     );
     const regBtn = screen.getByRole("button", {
-      name: /登録/i
+      name: /Submit/i
     });
     expect(regBtn).toBeInTheDocument();
   });

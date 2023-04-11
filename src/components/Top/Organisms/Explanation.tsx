@@ -22,7 +22,7 @@ function Explanation() {
         mb={2}
         width="80%"
       >
-        Help organizers to calculate the payment amount of each member
+        Calculate the payment amount of each member at a drinking party!!
       </Typography>
       <Box sx={{ display: { xs: "none", lg: "block" } }}>
         <Cheers height="300px" width="500px" />
@@ -30,15 +30,6 @@ function Explanation() {
       <Box sx={{ display: { lg: "none" } }}>
         <Cheers height="170px" width="250px" />
       </Box>
-      <Typography
-        variant="subtitle2"
-        pt={3}
-        pb={3}
-        component="span"
-        sx={{ textAlign: "center", fontSize: { lg: "1rem", xs: "1em" }, width: { lg: "80%", xs: "80%" }, }}
-      >
-        Calculate the payment amount for each member in percentage units.
-      </Typography>
     </Stack>
   );
 }

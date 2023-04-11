@@ -8,7 +8,7 @@ exports[`Explanation takes a snapshot 1`] = `
     <span
       class="MuiTypography-root MuiTypography-subtitle1 css-lwc1kd-MuiTypography-root"
     >
-      Help organizers to calculate the payment amount of each member
+      Calculate the payment amount of each member at a drinking party!!
     </span>
     <div
       class="MuiBox-root css-6k8fz8"
@@ -570,11 +570,6 @@ exports[`Explanation takes a snapshot 1`] = `
         </defs>
       </svg>
     </div>
-    <span
-      class="MuiTypography-root MuiTypography-subtitle2 css-1qdo9mx-MuiTypography-root"
-    >
-      Calculate the payment amount for each member in percentage units.
-    </span>
   </div>
 </DocumentFragment>
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import BaseLayout from "components/Commons/Layout/BaseLayout";
 import MyHeader from "components/Commons/Organisms/MyHeader";
@@ -8,10 +8,15 @@ import Explanation from "components/Top/Organisms/Explanation";
 import { Stack } from "@mui/material";
 
 function Top() {
+  // Clear all data from session storage
+  useEffect(() => {
+    sessionStorage.clear();
+  });
+
   return (
     <BaseLayout>
       <Stack direction="column" justifyContent="center" alignItems="center">
-        <MyHeader value="NomiKan" hideGoBack />
+        <MyHeader value="SplitSip" hideGoBack />
         <Stack
           direction="column"
           pt={10}

@@ -280,6 +280,8 @@ exports[`TotalAmount takes a snapshot 1`] = `
                 aria-invalid="false"
                 class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
                 id=":r2:"
+                inputmode="numeric"
+                pattern="\\\\d*"
                 type="number"
                 value=""
               />

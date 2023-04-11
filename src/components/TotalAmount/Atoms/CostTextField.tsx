@@ -18,6 +18,10 @@ function CostTextField({ setLocalCost, value }: Props) {
         size="small"
         type="number"
         variant="outlined"
+        inputProps={{
+          pattern: "\\d*",
+          inputMode: "numeric",
+        }}
         onChange={(e) => setLocalCost(e.target.value)}
         sx={{
           width: {

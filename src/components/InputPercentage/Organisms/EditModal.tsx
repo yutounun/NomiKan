@@ -72,7 +72,16 @@ function Content({
 
         {/* Input */}
         <Stack direction="row" alignItems="center">
-          <TextField data-testid="edit-member-input" placeholder="Type the ratio" size="small" onBlur={(e) => setRatio(Number(e.target.value))} />
+          <TextField
+            data-testid="edit-member-input"
+            inputProps={{
+              pattern: "\\d*",
+              inputMode: "numeric",
+            }}
+            placeholder="Type the ratio"
+            size="small"
+            onBlur={(e) => setRatio(Number(e.target.value))}
+          />
           <Typography ml={2}>%</Typography>
         </Stack>
 

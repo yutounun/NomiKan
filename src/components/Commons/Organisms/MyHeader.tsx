@@ -37,7 +37,7 @@ function MyHeader({ value, hideGoBack }: Props) {
             backgroundColor: "white",
             position: "fixed",
             top: 0,
-            left: 20,
+            left: { xs: 20, lg: 50 },
           }}
         >
           <GoBack onClick={handleGoBack} />

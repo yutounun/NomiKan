@@ -163,7 +163,7 @@ describe("AddMembers page", () => {
       })
     );
 
-    expect(screen.getByText("EDIT")).toBeInTheDocument();
+    expect(screen.getByText("Edit Name")).toBeInTheDocument();
   });
 
   it("shows edit modal and let you register the updated name", () => {

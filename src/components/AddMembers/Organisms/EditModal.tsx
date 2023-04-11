@@ -60,7 +60,7 @@ function Content({
       <Stack flexDirection="column" justifyContent="center" alignItems="center" sx={style}>
         {/* title */}
         <Typography id="modal-modal-title" variant="h6" fontWeight="bold">
-          EDIT
+          Edit Name
         </Typography>
 
         {/* Input */}
@@ -70,7 +70,7 @@ function Content({
         <MyButton
           dataTestid="submit-edit-btn"
           onClick={handleClickRegButton}
-          value="Submit"
+          value="Update"
           variant="contained"
           sx={{ borderRadius: "30px", marginTop: "2em", width: { xs: "70%", md: "40%" }, height: { xs: "2em", md: "3em" } }}
         />

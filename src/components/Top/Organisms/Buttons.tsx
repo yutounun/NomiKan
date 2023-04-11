@@ -10,7 +10,7 @@ function Buttons() {
   const buttons = [
     {
       to: "/total-amount",
-      label: "START",
+      label: "Get Started",
       icon: <RocketLaunchOutlinedIcon />,
     },
     {

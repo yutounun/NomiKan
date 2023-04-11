@@ -67,7 +67,7 @@ function Content({
       <Stack flexDirection="column" justifyContent="center" alignItems="center" sx={style}>
         {/* title */}
         <Typography id="modal-modal-title" variant="h6" mb={2} fontWeight="bold">
-          EDIT
+          Edit Ratio
         </Typography>
 
         {/* Input */}
@@ -89,7 +89,7 @@ function Content({
         <MyButton
           dataTestid="submit-edit-btn"
           onClick={handleClickRegButton}
-          value="Add To List"
+          value="Update"
           variant="contained"
           sx={{ borderRadius: "30px", marginTop: "2em", width: { xs: "70%", md: "40%" }, height: { xs: "2em", md: "3em" } }}
         />

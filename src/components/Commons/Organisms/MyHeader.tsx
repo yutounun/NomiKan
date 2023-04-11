@@ -1,6 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 import GoBack from "@mui/icons-material/ArrowBackIos";
+import { blue } from "@mui/material/colors";
 
 class Props {
   value?: string = "Title";
@@ -24,7 +25,7 @@ function MyHeader({ value, hideGoBack }: Props) {
           top: 0,
         }}
       >
-        <Typography variant="h1" sx={{ fontSize: { lg: "40px", xs: "25px" } }}>{value}</Typography>
+        <Typography variant="h1" sx={{ color: "#D500FF", fontSize: { lg: "40px", xs: "25px" } }}>{value}</Typography>
       </Stack>
 
       {/* In case go back btn isn't hidden */}

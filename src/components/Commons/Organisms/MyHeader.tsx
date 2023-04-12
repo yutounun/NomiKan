@@ -1,7 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 import GoBack from "@mui/icons-material/ArrowBackIos";
-import { blue } from "@mui/material/colors";
 
 class Props {
   value?: string = "Title";

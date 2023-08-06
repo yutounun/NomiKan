@@ -30,7 +30,7 @@ function Buttons() {
         <a key={button.label} href={button.to} style={{ textDecoration: "none", textAlign: "center" }}>
           <MyButton
             startIcon={button.icon}
-            variant="outlined"
+            variant="contained"
             value={button.label}
             color="primary"
             size="large"

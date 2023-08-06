@@ -15,10 +15,10 @@ function TotalAmount() {
   };
 
   return (
-    <BaseLayout>
+    <BaseLayout backgroundColor="#EBF3FF">
       <Stack direction="column" justifyContent="center" alignItems="center">
         {/* Total Amount Header */}
-        <MyHeader value="Total Amount" />
+        <MyHeader reversedColor value="Total Amount" />
 
         {/* Stepper showing the current page */}
         <MyStepper activeStep={0} />

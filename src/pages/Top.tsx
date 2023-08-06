@@ -14,9 +14,9 @@ function Top() {
   });
 
   return (
-    <BaseLayout>
+    <BaseLayout backgroundColor="#EBF3FF">
       <Stack direction="column" justifyContent="center" alignItems="center">
-        <MyHeader value="SplitSip" hideGoBack />
+        <MyHeader reversedColor value="SplitSip" hideGoBack />
         <Stack
           direction="column"
           pt={10}

@@ -5,7 +5,7 @@ const theme = (isDarkMode: boolean) => {
     palette: {
       mode: isDarkMode ? "dark" : "light",
       primary: {
-        main: "#d500ff",
+        main: "#204CAC",
       },
       secondary: {
         main: "#0f0",

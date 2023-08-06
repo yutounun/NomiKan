@@ -17,10 +17,10 @@ function AddMembers() {
   };
 
   return (
-    <BaseLayout>
+    <BaseLayout backgroundColor="#EBF3FF">
       <Stack direction="column" justifyContent="center" alignItems="center">
         {/* 合計金額Header */}
-        <MyHeader value="Members" />
+        <MyHeader reversedColor value="Members" />
 
         {/* Stepper showing the current page */}
         <MyStepper activeStep={1} />

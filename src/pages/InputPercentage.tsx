@@ -17,10 +17,10 @@ function InputPercentage() {
   // };
 
   return (
-    <BaseLayout>
+    <BaseLayout backgroundColor="#EBF3FF">
       <Stack direction="column" justifyContent="center" alignItems="center">
         {/* 割合入力Header */}
-        <MyHeader value="Ratio" />
+        <MyHeader reversedColor value="Ratio" />
 
         {/* Stepper showing the current page */}
         <MyStepper activeStep={2} />

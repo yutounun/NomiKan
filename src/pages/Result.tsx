@@ -8,10 +8,10 @@ import Content from "components/Result/Organisms/Content";
 
 function InputPercentage() {
   return (
-    <BaseLayout>
+    <BaseLayout backgroundColor="#EBF3FF">
       <Stack direction="column" justifyContent="center" alignItems="center">
         {/* Result Header */}
-        <MyHeader value="Result" />
+        <MyHeader reversedColor value="Result" />
 
         {/* Stepper showing the current page */}
         <MyStepper activeStep={3} />

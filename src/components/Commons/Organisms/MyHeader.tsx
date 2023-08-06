@@ -1,6 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 import GoBack from "@mui/icons-material/ArrowBackIos";
+import { ReactComponent as Logo } from "./logo.svg";
 
 class Props {
   value?: string = "Title";
@@ -15,6 +16,20 @@ function MyHeader({ value, hideGoBack, reversedColor }: Props) {
   };
   return (
     <>
+      <Stack
+        mt={2.8}
+        sx={{
+          backgroundColor: "#EBF3FF",
+          position: "fixed",
+          top: 0,
+          right: 10,
+          display: { lg: "block", xs: "none" }
+        }}
+      >
+        <a href="/">
+          <Logo />
+        </a>
+      </Stack>
       {
         reversedColor
           ? (
@@ -29,7 +44,7 @@ function MyHeader({ value, hideGoBack, reversedColor }: Props) {
                 top: 0,
               }}
             >
-              <Typography variant="h1" sx={{ color: "#4E31AA", fontSize: { lg: "40px", xs: "25px" } }}>{value}</Typography>
+              <Typography variant="h1" sx={{ fontFamily: "Arial", color: "#4E31AA", fontSize: { lg: "40px", xs: "25px" } }}>{value}</Typography>
             </Stack>
           )
           : (
